@@ -43,11 +43,11 @@
 
 
 # text = input('Enter the string: ')
-# symbol = input('Enter additional symbol: ')
+# symbol = input('Enter 11_additional symbol: ')
 #
 # doubled_sym = [x * 2 for x in text]
 # additional_sym = [x + symbol for x in doubled_sym]
-# print(f"List of doubles symbols: {doubled_sym}\nSketch with additional symbol: {additional_sym}")
+# print(f"List of doubles symbols: {doubled_sym}\nSketch with 11_additional symbol: {additional_sym}")
 
 
 # def higher_price(price, percent):
