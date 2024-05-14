@@ -50,3 +50,23 @@
 # print(text.title())
 
 
+# Task 5. Capitan Flint
+#
+# y_path = input('Enter path OY: ')
+# x_path = input('Enter path OX: ')
+# x = y = 0
+# x_digits = [x for x in x_path if x.isdigit()]
+# y_digits = [y for y in y_path if y.isdigit()]
+#
+#
+# if x_path.startswith('East'):
+#     x = int(''.join(x_digits))
+# elif x_path.startswith('West'):
+#     x = 0 - int(''.join(x_digits))
+#
+# if y_path.startswith('South'):
+#     y = 0 - int(''.join(y_digits))
+# elif y_path.startswith('North'):
+#     y = int(''.join(y_digits))
+#
+# print('Coordinates: {x_o} {y_o}'.format(x_o=x, y_o=y))
