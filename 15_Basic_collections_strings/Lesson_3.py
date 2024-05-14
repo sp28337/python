@@ -23,3 +23,20 @@
 #     print('Path is correct!')
 # else:
 #     print('Error')
+
+
+# Task 3. Delete a part
+#
+# message = input('Enter message: ')
+# upper_syms = lower_syms = 0
+#
+# for i in message:
+#     if i.isupper():
+#         upper_syms += 1
+#     elif i.islower():
+#         lower_syms += 1
+#
+# if upper_syms > lower_syms:
+#     print(message.upper())
+# else:
+#     print(message.lower())
