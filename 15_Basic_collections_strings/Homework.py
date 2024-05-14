@@ -21,3 +21,26 @@
 #         last_word = word
 #
 # print(last_word, len(last_word))
+
+
+# Task 3. Files
+#
+# file_name = input('Enter file name: ')
+# # forbidden_syms = ['@', '№', '$', '%', '^', '&', '*', '(', ')']
+# if (file_name.startswith('@') or
+#     file_name.startswith('№') or
+#     file_name.startswith('$') or
+#     file_name.startswith('%') or
+#     file_name.startswith('^') or
+#     file_name.startswith('&') or
+#     file_name.startswith('*') or
+#     file_name.startswith('(') or
+#     file_name.startswith(')')):
+#     print('Error: name starts with one of forbidden symbols.')
+# else:
+#     if file_name.endswith('.txt') or file_name.endswith('.docx'):
+#         print('Correct file name.')
+#     else:
+#         print('Error: wrong decoding file. Expected .txt or .docx')
+
+
