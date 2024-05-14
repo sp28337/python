@@ -44,3 +44,9 @@
 #         print('Error: wrong decoding file. Expected .txt or .docx')
 
 
+# Task 4. Upper letters
+#
+# text = input('Enter the string: ')
+# print(text.title())
+
+
