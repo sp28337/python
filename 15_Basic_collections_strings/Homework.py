@@ -139,3 +139,25 @@
 #
 # encoded_str = comprehension_func(text)
 # print('Encoded string:', encoded_str)
+
+
+# Task 9. IP - address 2
+#
+# def is_correct_ip(ip):
+#
+#     if len(ip) == 4:
+#         for i in range(len(ip)):
+#             if not ip[i].isdigit():
+#                 return print(ip[i], '- not an integer')
+#
+#             elif not 0 <= int(ip[i]) <= 255:
+#                 return print(f"{ip[i]} must be between 0 and 255")
+#
+#         else:
+#             return print('IP - address is correct')
+#     else:
+#         return print('Address - 4 digits, separated by dots.')
+#
+#
+# ip_address = input('Enter IP: ').split()
+# is_correct_ip(ip_address)
