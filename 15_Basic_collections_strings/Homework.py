@@ -100,3 +100,19 @@
 #         break
 #     else:
 #         print('Password must contain at least 8 symbols, 3 digits and 1 uppercase character. Try again.')
+
+
+# Task 7. Digits in the string
+#
+# def find_digits(string):
+#     nums = []
+#     for sym in string:
+#         if sym.isdigit():
+#             nums.append(sym)
+#     return ''.join(nums)
+#
+#
+# text = input('Enter a string: ')
+#
+# digits = find_digits(text)
+# print('Numbers:', digits)
