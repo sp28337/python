@@ -116,3 +116,26 @@
 #
 # digits = find_digits(text)
 # print('Numbers:', digits)
+
+
+# Task 8. Compression
+#
+# def comprehension_func(string):
+#     copmr_str = ''
+#     counter = 1
+#     sym2 = string[0]
+#     for sym1 in range(len(string)):
+#         if string[sym1] == sym2:
+#             counter += 1
+#         else:
+#             copmr_str += sym2 + str(counter)
+#             sym2 = string[sym1]
+#             counter = 1
+#     copmr_str += sym2 + str(counter)
+#     return copmr_str
+#
+#
+# text = input('Enter message to encode: ')
+#
+# encoded_str = comprehension_func(text)
+# print('Encoded string:', encoded_str)
