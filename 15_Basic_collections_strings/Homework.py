@@ -70,3 +70,33 @@
 #     y = int(''.join(y_digits))
 #
 # print('Coordinates: {x_o} {y_o}'.format(x_o=x, y_o=y))
+
+
+# Task 6. Password
+#
+# def is_three_digits(string):
+#     nums = 0
+#     for sym in string:
+#         if sym.isdigit():
+#             nums += 1
+#     if nums >= 3:
+#         return True
+#     return False
+#
+#
+# def is_upper_symbol(string):
+#     flag = False
+#     for sym in string:
+#         if sym.isupper():
+#             flag = True
+#             break
+#     return flag
+#
+#
+# while True:
+#     password = input('Enter password: ')
+#     if len(password) >= 8 and is_three_digits(password) and is_upper_symbol(password):
+#         print('Strong password!')
+#         break
+#     else:
+#         print('Password must contain at least 8 symbols, 3 digits and 1 uppercase character. Try again.')
