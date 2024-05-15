@@ -21,3 +21,23 @@
 #     student['Grates'].append(i_grates)
 # for i in student:
 #     print(i, '-', student[i])
+
+
+# Task 3. Contacts
+#
+# phone_book = dict()
+# while True:
+#     print('Current contacts on the phone book:')
+#     if phone_book:
+#         for i in phone_book:
+#             print(i, phone_book[i])
+#     else:
+#         print('<Clear>')
+#     contact_name = input('Enter contact name: ')
+#     if contact_name in phone_book:
+#         print('Error: this name already exist in the dictionary!')
+#
+#     else:
+#         phone_number = int(input('Enter phone number: '))
+#         phone_book[contact_name] = phone_number
+#     print()
