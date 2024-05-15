@@ -161,3 +161,10 @@
 #
 # ip_address = input('Enter IP: ').split()
 # is_correct_ip(ip_address)
+
+
+# Task 10. Mathematic
+#
+#
+# equation = '(5+4)*2-10'
+# print(eval(equation))
