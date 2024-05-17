@@ -32,3 +32,18 @@
 # print(set_nums_1.intersection(set_nums_2))
 # print(set_nums_2 - set_nums_1)
 
+
+# Task 3. Different digits
+#
+# def find_unique_digits(string):
+#     new_set = set()
+#     for i in string:
+#         if i.isdigit():
+#             new_set.add(i)
+#
+#     return ''.join(sorted(new_set))
+#
+#
+# text = input('Enter message: ')
+# unique_digits = find_unique_digits(text)
+# print(f"Unique digits of string: {unique_digits}")
