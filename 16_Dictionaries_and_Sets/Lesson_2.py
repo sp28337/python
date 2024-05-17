@@ -42,3 +42,21 @@
 # print('Smallest profit from {0}. It contains {1} dollars'.format(deleted_fruit, min(min_value)))
 # incomes.pop(deleted_fruit)
 # print('Final dictionary:', incomes)
+
+
+# Task 3. Frequency histogram
+#
+# def hist(string):
+#     text_dict = dict()
+#     for i in sorted(string):
+#         text_dict[i] = string.count(i)
+#     return text_dict
+#
+#
+# text = input('Enter the text: ')
+# hist_dict = hist(text)
+#
+# for i in hist_dict.keys():
+#     print(i, ':', hist_dict[i])
+#
+# print('Maximum hist: {}'.format(max(hist_dict.values())))
