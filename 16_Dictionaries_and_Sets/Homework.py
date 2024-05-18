@@ -154,3 +154,26 @@
 #             total_summ_and_profit(store[i_store])
 
 
+# Task 5. Histogramm 2
+#
+# def inversion(dictionary):
+#     rev_dict = dict()
+#     new_set = set(x for x in dictionary.values())
+#     for key in new_set:
+#         value = [x for x in dictionary.keys() if dictionary[x] == key]
+#         rev_dict[key] = value
+#     return rev_dict
+#
+#
+# text = (input('Enter the text: '))
+# dict_hist = {x: text.count(x) for x in sorted(text)}
+#
+# print('Original dict of hists:')
+# for i in dict_hist.keys():
+#     print(i, ':', dict_hist[i])
+#
+# print('\nInverted dict of hists:')
+#
+# invert_dict = inversion(dict_hist)
+# for j in invert_dict:
+#     print(j, ':', invert_dict[j])
