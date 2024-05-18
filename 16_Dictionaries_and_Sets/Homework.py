@@ -177,3 +177,30 @@
 # invert_dict = inversion(dict_hist)
 # for j in invert_dict:
 #     print(j, ':', invert_dict[j])
+
+
+# Task 6. Synonyms dict
+#
+# amount_pairs = int(input('Enter the number of word pairs: '))
+# synonyms_dict = dict()
+# for pair in range(1, amount_pairs + 1):
+#     print(f"{pair} pair:", end='')
+#     words_pair = ''.join(input('').title().split())
+#     synonyms_dict.setdefault(words_pair[:words_pair.index('-')], words_pair[words_pair.index('-') + 1:])
+#
+# print(synonyms_dict)
+# flag = True
+# while flag:
+#     word = input('Enter the word: ').title()
+#     for key, value in synonyms_dict.items():
+#         if word == key:
+#             print(value)
+#             flag = False
+#             break
+#         elif word == value:
+#             print(key)
+#             flag = False
+#             break
+#     else:
+#         print('There is not word like this in the dictionary.')
+
