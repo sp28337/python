@@ -230,6 +230,23 @@
 #     print(f'\n{i}:')
 #     for j in sorted(database[i]):
 #         print(f'\t{j}: {database[i][j]}')
+
+
+# Task 8. Guess the number
 #
-# print(database)
+# possible_numbers = set(str(x) for x in range(1, int(input('Enter the number: ')) + 1))
+# while True:
+#     input_string = input('Number we need among these numbers: ')
+#     if input_string.strip().lower() == 'help!':
+#         # print(f"Artem could guess next numbers: ", end='')
+#         # for i in sorted(possible_numbers):
+#         #     print(i, end=' ')
+#         print('Artem could guess next numbers:', ' '.join(map(str, sorted(possible_numbers))))
+#         break
+#     input_string = set(input_string.split())
+#     artem_answer = input('Artem answer: ').lower()
+#     if artem_answer == 'yes':
+#         possible_numbers = possible_numbers & input_string
+#     elif artem_answer == 'not':
+#         possible_numbers = possible_numbers.difference(input_string)
 
