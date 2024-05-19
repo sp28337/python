@@ -204,3 +204,32 @@
 #     else:
 #         print('There is not word like this in the dictionary.')
 
+
+# Task 7. Pizza
+#
+# def make_list_orders(list_orders, new_database):
+#     if list_orders[0] in new_database:
+#         if list_orders[1] in new_database[list_orders[0]]:
+#             new_database[list_orders[0]][list_orders[1]] += int(list_orders[2])
+#         else:
+#             new_database[list_orders[0]][list_orders[1]] = list_orders[2]
+#     else:
+#         new_database[list_orders[0]] = dict({list_orders[1]: int(list_orders[2])})
+#     return new_database
+#
+#
+# orders = int(input('How many orders?: '))
+# database = dict()
+# for order in range(orders):
+#     print('{0} order:'.format(order + 1), end=' ')
+#     info_order = input('').split()
+#     database.update(make_list_orders(info_order, database))
+#
+#
+# for i in database:
+#     print(f'\n{i}:')
+#     for j in sorted(database[i]):
+#         print(f'\t{j}: {database[i][j]}')
+#
+# print(database)
+
