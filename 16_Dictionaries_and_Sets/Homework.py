@@ -250,3 +250,23 @@
 #     elif artem_answer == 'not':
 #         possible_numbers = possible_numbers.difference(input_string)
 
+
+# Task 9. Pedigree
+#
+# dict_each_member = dict()
+# people = int(input('Count of people: '))
+#
+# for i in range(1, people):
+#     print(i, 'pair:', end=' ')
+#     pair = input('').split()
+#
+#     if pair[1] not in dict_each_member:
+#         dict_each_member.setdefault(pair[1], 0)
+#         dict_each_member.setdefault(pair[0], dict_each_member[pair[1]] + 1)
+#     else:
+#         dict_each_member.setdefault(pair[0], dict_each_member[pair[1]] + 1)
+#
+# print('\nHeight of each family member:')
+# for i in sorted(dict_each_member):
+#     print(i, dict_each_member[i])
+
