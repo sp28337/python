@@ -270,3 +270,29 @@
 # for i in sorted(dict_each_member):
 #     print(i, dict_each_member[i])
 
+# Task 10. Palindrome again
+#
+# from collections import Counter
+#
+#
+# def can_form_palindrome(string):
+#     char_count = Counter(string)
+#     odd_count = sum(1 for count in char_count.values() if count % 2 != 0)
+#     if len(string) % 2 == 0:
+#         return odd_count == 0
+#     else:
+#         return odd_count == 1
+#
+#
+# example1 = 'aassaaaffff'
+# example2 = 'aabfhasfc'
+#
+# if can_form_palindrome(example1):
+#     print('May do palindrome.')
+# else:
+#     print('Cannot do palindrome.')
+#
+# if can_form_palindrome(example2):
+#     print('May do palindrome.')
+# else:
+#     print('Cannot do palindrome.')
