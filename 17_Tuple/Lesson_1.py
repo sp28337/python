@@ -29,4 +29,26 @@
 # result = find_side(radius, height)
 # for value in result:
 #     print(round(value, 2))
+
+
+# Task 3. Wrong code
 #
+# import random
+#
+#
+# def change(nums):
+#     index = random.randint(0, 4)
+#     value = random.randint(100, 1000)
+#     nums = list(nums)
+#     nums[index] = value
+#
+#     return tuple(nums), value
+#
+#
+# my_nums = 1, 2, 3, 4, 5
+#
+# new_nums, first_rand_val = change(my_nums)
+# print(new_nums, first_rand_val)
+#
+# new_nums, second_rand_val = change(new_nums)
+# print(new_nums, first_rand_val + second_rand_val)
