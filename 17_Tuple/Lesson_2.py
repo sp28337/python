@@ -32,3 +32,25 @@
 #
 # print(f"\nFirst dict: {dict1}\nSecond dict: {dict2}")
 
+
+# Task 3. Universal program
+#
+# def find_elements(arr):
+#     elements = list()
+#     if isinstance(arr, list):
+#         elements = [x for x in arr if arr.index(x) % 2 == 0]
+#     elif isinstance(arr, str) or isinstance(arr, tuple):
+#         for index, item in enumerate(arr):
+#             if index % 2 == 0:
+#                 elements.append(item)
+#     return elements
+#
+#
+# example1 = 'О Дивный Новый мир!'
+# example2 = (100, 200, 300, 'буква', 0, 2, 'а')
+#
+# list_elements1 = find_elements(example1)
+# list_elements2 = find_elements(example2)
+#
+# print(list_elements1)
+# print(list_elements2)
