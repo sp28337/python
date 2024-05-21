@@ -22,3 +22,23 @@
 # surname, name = find_name_surname(series, number, data)
 # print(name, surname)
 
+
+# Task 2. Contacts 2
+#
+#
+# phone_book = dict()
+#
+# while True:
+#     print('Current contacts on the phone book:')
+#     if phone_book:
+#         for key, val in phone_book.items():
+#             for i_key, i_val in enumerate(key):
+#                 print(i_val, end=' ')
+#             else:
+#                 print('--- {v}'.format(v=val))
+#     else:
+#         print('<Clear>')
+#
+#     contact_name = tuple(input('\nEnter new contact (name surname): ').split())
+#     phone_number = int(input('Enter phone number: '))
+#     phone_book[contact_name] = phone_number
