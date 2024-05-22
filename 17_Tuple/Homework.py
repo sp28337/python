@@ -139,3 +139,32 @@
 # if not found:
 #     print('No matching surnames found.')
 
+
+# Task 6. By pairs
+#
+# origin_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# new_list, index_lst = list(), list()
+#
+# for i in origin_list:
+#
+#     if len(index_lst) >= 2:
+#         new_list.append(tuple(index_lst))
+#         index_lst = list()
+#         index_lst.append(i)
+#     else:
+#         index_lst.append(i)
+#
+# else:
+#     if len(index_lst) == 2:
+#         new_list.append(tuple(index_lst))
+#     else:
+#         new_list.extend(tuple(index_lst))
+#
+# print(new_list)
+#
+# new_list = [(val, origin_list[index + 1])
+#             for index, val in enumerate(origin_list)
+#             if not val == origin_list[-1] and index % 2 == 0]
+#
+# print(new_list)
