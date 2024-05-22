@@ -117,3 +117,25 @@
 # new_data = [key + val for key, val in players.items()]
 # print(new_data)
 
+
+# Task 5. One family
+#
+# family_dict = {
+#     ("Tarakanova", "Kristina"): 25,
+#     ("Tarakanov", "Pavel"): 29,
+#     ("Saxarov", "Andrey"): 52,
+#     ("Pavlov", "Ivan"): 30
+# }
+#
+#
+# surname = input('Enter surname: ').title()
+#
+# found = False
+# for key, val in family_dict.items():
+#     if key[0].startswith(surname[:5]):
+#         print(f"{' '.join([key[0], key[1]])} {val}")
+#         found = True
+#
+# if not found:
+#     print('No matching surnames found.')
+
