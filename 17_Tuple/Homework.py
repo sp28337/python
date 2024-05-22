@@ -74,3 +74,34 @@
 # print(list_elements2)
 
 
+# Task 3. Function
+#
+# import random
+#
+#
+# def some_func(arr_tuple, rand_elem):
+#     my_data = list()
+#     if arr_tuple.count(rand_elem) == 1:
+#         for index in arr_tuple[arr_tuple.index(rand_elem):]:
+#             my_data.append(index)
+#         return tuple(my_data)
+#     elif arr_tuple.count(rand_elem) > 1:
+#         my_data.append(rand_elem)
+#         for index in arr_tuple[arr_tuple.index(rand_elem) + 1:]:
+#             if index == rand_elem:
+#                 my_data.append(index)
+#                 return tuple(my_data)
+#             my_data.append(index)
+#     else:
+#         return tuple()
+#
+#
+# new_tuple = tuple(random.randint(0, 10) for _ in range(10))
+# elem = random.randint(0, 10)#int(input('Enter random number: '))
+#
+# print(new_tuple, elem)
+#
+# another_tuple = some_func(new_tuple, elem)
+#
+# print(another_tuple)
+
