@@ -168,3 +168,23 @@
 #             if not val == origin_list[-1] and index % 2 == 0]
 #
 # print(new_list)
+
+
+# Task 7. Sorted function
+#
+# import random
+#
+#
+# def sorted_tuple(some_tuple):
+#     if all(isinstance(i, int) for i in some_tuple):
+#         return tuple(sorted(some_tuple))
+#     else:
+#         return some_tuple
+#
+#
+# my_tuple = tuple(random.randint(0, 100) for _ in range(10))
+# print(my_tuple)
+#
+# my_sorted_tuple = sorted_tuple(my_tuple)
+# print(my_sorted_tuple)
+
