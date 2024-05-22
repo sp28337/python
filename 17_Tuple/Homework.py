@@ -39,3 +39,38 @@
 #     len=total_family_len
 # ))
 
+
+# Task 2. Universal programm 2
+#
+#
+# def is_prime(num):
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#     return True
+#
+#
+# def find_elements(arr):
+#     elements = list()
+#     if isinstance(arr, list):
+#         elements = [x for x in arr if is_prime(arr.index(x))]
+#     elif isinstance(arr, str) or isinstance(arr, tuple):
+#         for index, item in enumerate(arr):
+#             if is_prime(index):
+#                 elements.append(item)
+#     return elements
+#
+#
+# def main_func(arrange):
+#     return find_elements(arrange)
+#
+# example1 = 'О Дивный Новый мир!'
+# example2 = (100, 200, 300, 'буква', 0, 2, 'а')
+#
+# list_elements1 = main_func(example1)
+# list_elements2 = main_func(example2)
+#
+# print(list_elements1)
+# print(list_elements2)
+
+
