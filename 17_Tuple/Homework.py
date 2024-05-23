@@ -188,3 +188,43 @@
 # my_sorted_tuple = sorted_tuple(my_tuple)
 # print(my_sorted_tuple)
 
+
+# Task. 8 Contacts 3
+#
+# def add_contact(contacts):
+#     surname_name = tuple(input('Enter surname and name of the contact: ').title().split())
+#     if surname_name in contacts:
+#         print('This contact already exists')
+#     else:
+#         phone = int(input('Enter phone number of the contact: '))
+#         contacts[surname_name] = phone
+#     print('\nPHONE BOOK:')
+#     for key, val in contacts.items():
+#         print('{0} {1} --- {2}'.format(key[0], key[1], val))
+#     print()
+#
+#
+# def find_contact(contacts):
+#     find_to = input('Enter person to find: ').title()
+#     for k, v in contacts.items():
+#         if find_to in k:
+#             print(f"Number of {find_to} is {v}")
+#             break
+#     else:
+#         print('There are not contact like this in your phonebook')
+#     print()
+#
+#
+# def main_menu(contacts):
+#
+#     while True:
+#         print('What do you want to do?\n1 - ADD CONTACT\n2 - FIND PERSON IN CONTACT LIST')
+#         answer = int(input(''))
+#         if answer == 1:
+#             add_contact(contacts)
+#         elif answer == 2:
+#             find_contact(contacts)
+#
+#
+# contacts_book = {('Pavel', 'Tarakanov'): 89307407771}
+# main_menu(contacts_book)
