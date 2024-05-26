@@ -228,3 +228,83 @@
 #
 # contacts_book = {('Pavel', 'Tarakanov'): 89307407771}
 # main_menu(contacts_book)
+
+
+# Task 9. Competition protocol
+
+
+#def tuple_gamers(string):
+#
+#
+#
+#
+# game_protocol = list()
+# list_winners = list()
+#
+# entries = int(input('How many entries are included in the protocol?: '))
+#
+# for entry in range(entries):
+#     print(f'{entry + 1} entry:', end=' ')
+#     input_data = input('').split()
+#     game_protocol.append(tuple(input_data))
+#
+# print(game_protocol)
+# print()
+#
+# place = 1
+# for points, winner in enumerate(game_protocol):
+#     if place == 3:
+#         break
+#     for j_points
+#     print('{pl} place. {w} ({p})'.format(pl=place, w=winner, p=point))
+#     place += 1
+
+
+# Task 9 Competition protocol
+#
+# def sort_key(arr):
+#     return arr[0]
+#
+#
+# def protocol_competition(count_entries):
+#     protocol = list()
+#     winners = dict()
+#
+#     print('Entries (result and name):')
+#     while True:
+#         if isinstance(count_entries, int) and count_entries >= 3:
+#             entry = 1
+#             while len(protocol) != count_entries:
+#                 player = input(f"{entry} entry: ").split()
+#                 if len(player) == 2:
+#                     protocol.append((int(player[0]), player[1]))
+#                     entry += 1
+#                 else:
+#                     print('There are must not be any spaces in the name of player.\n')
+#             break
+#         else:
+#             print('Entry must be an integer and more or equal 3. Try again.\n')
+#
+#     for score, name in sorted(protocol, key=sort_key, reverse=True):
+#         if name in winners and score > winners[name]:
+#             winners[name] = score
+#         elif name not in winners:
+#             winners[name] = score
+#
+#     print()
+#
+#     if len(winners) < 3:
+#         print('There must be at least 3 competitors')
+#         protocol_competition(count_entries)
+#     else:
+#         print('Results of competitions:')
+#         place = 1
+#         for winner, points in winners.items():
+#             print('{0} place. {1} ({2})'.format(place, winner, points))
+#             place += 1
+#             if place == 4:
+#                 break
+#
+#
+# entries_in_protocol = int(input('How much entries in the protocol? '))
+# protocol_competition(entries_in_protocol)
