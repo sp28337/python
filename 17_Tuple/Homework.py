@@ -308,3 +308,40 @@
 #
 # entries_in_protocol = int(input('How much entries in the protocol? '))
 # protocol_competition(entries_in_protocol)
+
+
+# Task 10. My own zip
+#
+# def generating_my_own_zip(iterable_1, iterable_2):
+#     def min_range_len(i1, i2):
+#         return min(len(iterable_1), len(iterable_2))
+#
+#     def dict_keys(dict_1, dict_2, index):
+#         key1 = dict_1.keys()
+#         key2 = dict_2.keys()
+#         return key1, key2
+#
+#     if isinstance(iterable_1, dict) and isinstance(iterable_2, dict):
+#         iter_1, iter_2 = list(enumerate(iterable_1)), list(enumerate(iterable_2))
+#         pairs = ((iter_1[key][1], iter_2[key][1]) for key in range(min_range_len(iterable_1, iterable_2)))
+#
+#     elif isinstance(iterable_1, dict):
+#         iter_1 = list(enumerate(iterable_1))
+#         pairs = ((iter_1[key][1], iterable_2[key]) for key in range(min_range_len(iterable_1, iterable_2)))
+#
+#     elif isinstance(iterable_2, dict):
+#         iter_2 = list(enumerate(iterable_2))
+#         pairs = ((iterable_1[key], iter_2[key][1]) for key in range(min_range_len(iterable_1, iterable_2)))
+#
+#     else:
+#         pairs = ((iterable_1[i_elem], iterable_2[i_elem]) for i_elem in range(min_range_len(iterable_1, iterable_2)))
+#
+#     return pairs
+#
+#
+# iterable1 = {77: 7, 88: 8, 99: 9}
+# iterable2 = (10, 20, 30, 40, 50, 60)
+# my_own_zip = generating_my_own_zip(iterable1, iterable2)
+# default_zip = zip(iterable1, iterable2)
+# print(*my_own_zip)
+# print(*default_zip)
