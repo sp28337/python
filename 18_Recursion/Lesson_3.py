@@ -32,3 +32,44 @@
 # add_num(10)
 # add_num(15)
 
+
+# Task 3. Help to friend
+#
+# # def create_dict(input_data):
+# #     template = dict()
+# #     if isinstance(input_data, dict):
+# #         return input_data
+# #     elif isinstance(input_data, int) or isinstance(input_data, float) or isinstance(input_data, str):
+# #         template.setdefault(input_data, input_data)
+# #         return template
+# #     else:
+# #         return input_data
+# #
+# #
+# # def data_preparation(lst):
+# #     lst_copy = []
+# #     for i_element in lst:
+# #         lst_copy.append(create_dict(i_element))
+# #         if i_element == create_dict(i_element) and not isinstance(i_element, dict):
+# #             lst_copy.remove(i_element)
+# #     return lst_copy
+#
+#
+# def data_preparation(s_data):
+#     lst_copy = []
+#     for i in s_data:
+#         if isinstance(i, dict):
+#             lst_copy.append(i)
+#         elif isinstance(i, int) or isinstance(i, float) or isinstance(i, str):
+#             new_dict = dict()
+#             new_dict.setdefault(i, i)
+#             lst_copy.append(new_dict)
+#     return lst_copy
+#
+#
+# data = ["sad", {"sds": 23}, {43}, [12, 42, 1], 2323]
+# data = data_preparation(data)
+# print(data)
+#
+
+
