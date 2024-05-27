@@ -19,3 +19,16 @@
 # what_to_do('Do you really wanna go out?')
 # what_to_do('Do you wanna delete file?', 'So delete or not?')
 # what_to_do('Write a file?', retries=2)
+
+
+# Task 2. Accumulation of values
+#
+# def add_num(num, lst=None):
+#     lst = list()
+#     lst.append(num)
+#     print(lst)
+#
+# add_num(5)
+# add_num(10)
+# add_num(15)
+
