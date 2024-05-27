@@ -27,3 +27,85 @@
 # print(some_dict)
 # print(uniq_nums)
 
+
+# Task 2. Do not understand
+# def find_float(string):
+#     if '.' in string:
+#         for i in ''.join(string.split('.')):
+#             if not i.isdigit():
+#                 if i == 'e' or i == '-':
+#                     continue
+#                 result = None
+#                 return result
+#         else:
+#             return True
+#     else:
+#         for i in string:
+#             if not i.isdigit():
+#                 if i == 'e' or i == '-':
+#                     continue
+#                 result = None
+#                 return result
+#         else:
+#             return True
+#
+#
+# def find_list(string):
+#     if string.startswith('[') and string.endswith(']'):
+#         lst_of_str = string[1:-2].split(', ')
+#         if len(lst_of_str) == 1 + string.count(','):
+#             return True
+#     else:
+#         return None
+#
+#
+# def find_tuple(string):
+#     if len(string.split()) == 1 + string.count(','):
+#         return True
+#     else:
+#         return None
+#
+#
+# def info_data(some_data):
+#
+#     if some_data.startswith('{') and ':' in some_data:
+#         tip = 'dict (словарь)'
+#         m_i = 'mutable (изменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     elif find_list(some_data):
+#         tip = 'list (лист)'
+#         m_i = 'mutable (изменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     elif some_data.startswith('{') and some_data.count(',') + 1 == len(some_data[1:-1].split()):
+#         tip = 'set (множество)'
+#         m_i = 'mutable (изменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     elif find_tuple(some_data):
+#         tip = 'tuple (кортеж)'
+#         m_i = 'immutable (неизменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     elif some_data.isdigit():
+#         tip = 'int (целое число)'
+#         m_i = 'immutable (неизменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     elif find_float(some_data):
+#         tip = 'float (число с плавающей точкой)'
+#         m_i = 'immutable (неизменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#     else:
+#         tip = 'str (строка)'
+#         m_i = 'immutable (неизменяемый)'
+#         id_data = id(some_data)
+#         return tip, m_i, id_data
+#
+#
+# data = input('Enter some data: ')
+#
+# data_type, mut_immut, id_object = info_data(data)
+# print('\nData type: {0}\n{1}\nId: {2}'.format(data_type, mut_immut, id_object))
