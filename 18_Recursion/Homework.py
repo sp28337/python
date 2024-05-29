@@ -30,3 +30,17 @@
 # result = clone_zip(a, b, c, e)
 #
 # print(*result)
+
+
+# Task 3. Fibonacci numbers
+#
+# def find_num_position_fibonacci(number):
+#     if number <= 1:
+#         return number
+#     else:
+#         return find_num_position_fibonacci(number - 1) + find_num_position_fibonacci(number - 2)
+#
+#
+# num = int(input())
+# print(num, find_num_position_fibonacci(num))
+
