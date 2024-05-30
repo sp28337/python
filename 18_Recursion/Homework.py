@@ -44,3 +44,46 @@
 # num = int(input())
 # print(num, find_num_position_fibonacci(num))
 
+
+# Task 4. Seeking exemplar 2
+#
+# def find_key(dct, key, deep=10):
+#     if deep == 0:
+#         result = 'Max depth'
+#         return result
+#     if key in dct:
+#         return dct[key]
+#     for item in dct.values():
+#         if isinstance(item, dict):
+#             result = find_key(item, key, deep - 1)
+#             if result:
+#                 break
+#     else:
+#         result = 'There are not key like that.'
+#         return result
+#     return result
+#
+#
+# site = {
+#     'html': {
+#         'head': {
+#             'title': 'Мой сайт'
+#         },
+#         'body': {
+#             'h2': 'Здесь будет мой заголовок',
+#             'div': 'Тут, наверное, какой-то блок',
+#             'p': 'А вот здесь новый абзац'
+#         }
+#     }
+# }
+#
+# key_to_find = input('What key do you wanna find? ')
+# ask_for_deep = input('Do you wanna set max depth(10 - default)? ')
+#
+# if ask_for_deep in ('yes', 'yep', 'y', 'ya'):
+#     size_depth = int(input('Enter depth size: '))
+#     res = find_key(site, key_to_find, deep=size_depth)
+#     print(res)
+# else:
+#     res = find_key(site, key_to_find)
+#     print(res)
