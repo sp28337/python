@@ -87,3 +87,32 @@
 # else:
 #     res = find_key(site, key_to_find)
 #     print(res)
+
+
+# Task 5.
+
+
+# Task 6. Deep copying
+#
+# def make_site(name):
+#     site = {
+#         'html': {
+#             'head': {
+#                 'title': 'Куплю/продам {} недорого'.format(name)
+#             },
+#             'body': {
+#                 'h2': 'У нас самая низкая цена на {}'.format(name),
+#                 'div': 'Купить',
+#                 'p': 'Продать'
+#             }
+#         }
+#     }
+#     return site
+#
+#
+# number_of_sites = int(input('Enter numbers of sites: '))
+# for _ in range(number_of_sites):
+#     product_name = input('\nEnter product name for new site: ')
+#     result = make_site(product_name)
+#     print(f'\nSite for {product_name}:')
+#     print(result)
