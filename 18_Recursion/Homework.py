@@ -152,3 +152,18 @@
 # print(result)
 
 
+# Task 9. Hanoi towers
+#
+# def tower_of_hanoi(n, source, destination, auxiliary):
+#     moves = 0
+#     if n == 1:
+#         print("Move disk 1 from source", source, "to destination", destination)
+#         return
+#     tower_of_hanoi(n - 1, source, auxiliary, destination)
+#     print("Move disk", n, "from source", source, "to destination", destination)
+#     tower_of_hanoi(n - 1, auxiliary, destination, source)
+#
+#
+# disks_number = int(input('Enter number of disks: '))
+# tower_of_hanoi(disks_number, 1, 3, 2)
+
