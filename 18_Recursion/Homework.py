@@ -134,3 +134,21 @@
 # print(result)
 
 
+# Task 8. List of lists 2
+#
+# def unite_to_one_list(lst):
+#     union_list = list()
+#     for item in lst:
+#         if isinstance(item, list):
+#             union_list.extend(unite_to_one_list(item))
+#         else:
+#             union_list.append(item)
+#     return union_list
+#
+#
+# nice_list = [1, 2, [3, 4], [[5, 6, 7], [8, 9, 10]], [[11, 12, 13], [14, 15], [16, 17, 18]]]
+#
+# result = unite_to_one_list(nice_list)
+# print(result)
+
+
