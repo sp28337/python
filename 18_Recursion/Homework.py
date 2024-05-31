@@ -116,3 +116,21 @@
 #     result = make_site(product_name)
 #     print(f'\nSite for {product_name}:')
 #     print(result)
+
+
+# Task 7. Advanced sum function
+#
+# def my_sum(*args):
+#     total = 0
+#     for i_arg in args:
+#         if isinstance(i_arg, list):
+#             total += my_sum(*i_arg)
+#         else:
+#             total += i_arg
+#     return total
+#
+#
+# result = my_sum([[1, 2, [3]], [1], 3])
+# print(result)
+
+
