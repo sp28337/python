@@ -24,3 +24,9 @@
 #     print('    ', path)
 
 
+# Task 3. Root of dick
+# import os
+#
+# root = os.path.abspath(os.path.sep)
+# print(root)
+
