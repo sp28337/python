@@ -10,3 +10,17 @@
 #
 # print('Absolute path: {0}\nRelative path: {1}'.format(absolute_path, relative_path))
 #
+
+
+# Task 2. Content
+# import os
+#
+# disk = 'D:'
+# dir_path = os.path.abspath(os.path.join(disk, 'audio', 'music', 'neffex'))
+# print(dir_path)
+# print('Content of directory', dir_path)
+# for i_elem in os.listdir(dir_path):
+#     path = os.path.abspath(os.path.join(dir_path, i_elem))
+#     print('    ', path)
+
+
