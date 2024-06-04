@@ -28,3 +28,18 @@
 # answer_file = open('answer.txt')
 # data_2 = answer_file.read()
 # print(data_2)
+
+
+# Task 2. Python's dzen
+
+# import os
+#
+# zen_file = open('zen.txt')
+# data = zen_file.read()
+# lst = list()
+#
+# for i_line in data.split('\n'):
+#     lst.append(i_line)
+# zen_file.close()
+# lst.reverse()
+# print('\n'.join(lst))
