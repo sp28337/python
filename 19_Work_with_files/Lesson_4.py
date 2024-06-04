@@ -30,3 +30,23 @@
 # print(data)
 # answer.close()
 
+
+# Task 2. All in one
+#
+# import os
+# abs_path = os.path.abspath(os.path.join('..', '1_condition'))
+#
+# scripts_file = open('scripts.txt', 'w')
+# for i_elem in os.listdir(abs_path):
+#     if os.path.isfile(os.path.join(abs_path, i_elem)):
+#         i_elem_open = open(os.path.join(abs_path, i_elem), 'r')
+#         f_data = i_elem_open.read()
+#         scripts_file.write(f_data + '*' * 40 + '\n\n')
+#         i_elem_open.close()
+# scripts_file.close()
+#
+#
+# scripts_file = open('scripts.txt')
+# data = scripts_file.read()
+# print(data)
+# scripts_file.close()
