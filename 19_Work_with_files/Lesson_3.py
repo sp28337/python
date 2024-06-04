@@ -57,3 +57,34 @@
 #     do_what_need(open_file)
 # else:
 #     print('None')
+
+
+# Task 2. Seeking file 2
+#
+# import os
+# import random
+#
+#
+# def get_paths(file, lst, path):
+#     for i_elem in os.listdir(path):
+#         if i_elem.startswith(file[:-2]):
+#             lst.append(os.path.join(path, i_elem))
+#         if os.path.isdir(os.path.join(path, i_elem)) and not i_elem.startswith('.'):
+#             get_paths(file, lst, os.path.join(path, i_elem))
+#
+#
+# dir_name = input('Enter name of the directory where you gonna seek: ')
+# file_name = input('Enter name of file you wanna find: ')
+# path_dir = os.path.abspath(os.path.join(os.path.sep, dir_name))
+# list_paths = list()
+#
+# get_paths(file_name, list_paths, path_dir)
+#
+# if list_paths:
+#     reading_file = open(list_paths[random.randint(0, len(list_paths))], encoding='utf-8')
+#     data = reading_file.read()
+#     print()
+#     print(data)
+#     reading_file.close()
+# else:
+#     print('File not found')
