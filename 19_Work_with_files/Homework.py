@@ -43,3 +43,33 @@
 # zen_file.close()
 # lst.reverse()
 # print('\n'.join(lst))
+
+
+# Task 3. Dzen of Python 2
+#
+# letters, words, strings = 0, 0, 0
+# min_letter = 'a'
+#
+# zen_file = open('zen.txt')
+# # Find out strings count
+# for i_line in zen_file:
+#     strings += 1
+#
+# zen_file.seek(0)
+# # Find out letters count
+# data = zen_file.read()
+# for letter in data.lower():
+#     if letter.isalpha():
+#         letters += 1
+#         # Find out min letter
+#         if data.count(letter) < data.count(min_letter):
+#             min_letter = letter
+#
+# # Find out words count
+# words = len(data.split())
+#
+# zen_file.close()
+#
+# print(f'Letters {letters}\nWords {words}\nStrings {strings}')
+# print(f'Letters {letters}\nWords {words}\nStrings {strings}\nMin letter {min_letter}')
+
