@@ -172,3 +172,56 @@
 # data = cipher_text_file.read()
 # cipher_text_file.close()
 # print(data)
+
+
+# Task 7. Tournament
+#
+# import os
+#
+#
+# def get_data_from_file(path, lst_1t=None):
+#     if lst_1t is None:
+#         lst_1t = list()
+#         lst_2t = list()
+#         file = open(path, 'r', encoding='utf-8')
+#         print('Content of file first_tour.txt:')
+#         for row in file:
+#             print(row, end='')
+#             lst_1t.append(row[:-1].split())
+#         file.close()
+#
+#         min_score_to_pass = int(lst_1t[0][0])
+#
+#         for line in lst_1t[1:]:
+#             if int(line[2]) > min_score_to_pass:
+#                 # Change surname and name places
+#                 lst_2t.append([line[1][0] + '.', line[0], line[2]])
+#
+#         lst_2t = sorted(lst_2t, key=lambda player: player[2], reverse=True)
+#         lst_2t.insert(0, str(len(lst_2t)))
+#         return lst_1t, lst_2t
+#     else:
+#         print('ERROR')
+#
+#
+# def make_file(name, lst):
+#     file = open('second_tour.txt', 'w', encoding='utf-8')
+#     for index, value in enumerate(lst):
+#         if index == 0:
+#             file.write(value + '\n')
+#         else:
+#             file.write(f'{index}) {" ".join(value)}\n')
+#     file.close()
+#
+#
+# def read_file(name):
+#     print(f'\nContent of file {name}:')
+#     second_tour_file = open(name)
+#     data = second_tour_file.read()
+#     print(data)
+#     second_tour_file.close()
+#
+#
+# first_tour_players_lst, to_second_tour_lst = get_data_from_file(os.path.abspath('first_tour.txt'))
+# make_file('second_tour.txt', to_second_tour_lst)
+# read_file('second_tour.txt')
