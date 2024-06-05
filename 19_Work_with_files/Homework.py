@@ -139,3 +139,36 @@
 #     path_file.close()
 # else:
 #     print('Error')
+
+
+# Task 6. Paranoia
+#
+# import os
+# import string
+#
+#
+# def caesar_cipher(alph, encode, shift=1):
+#     char_list = [(alphabet[(alphabet.index(sym) + shift) % 33] if sym != ' ' else ' ') for sym in encode.lower()]
+#     return ''.join(char_list).title()
+#
+#
+# alphabet = string.ascii_letters
+# file_name = "text.txt"
+#
+# print('Content of file {name}:'.format(name=file_name))
+# file_name_file = open(os.path.abspath(file_name), 'r', encoding='utf-8')
+# list_strings = [x for x in file_name_file]
+# for i in list_strings:
+#     print(i, end='')
+# file_name_file.close()
+#
+# cipher_text_file = open('cipher_text.txt', 'w')
+# for index, val in enumerate(list_strings):
+#     cipher_text_file.write(caesar_cipher(alphabet, val[:-1], shift=index + 1) + '\n')
+# cipher_text_file.close()
+#
+# print('\nContent of file cipher_text.txt:')
+# cipher_text_file = open('cipher_text.txt')
+# data = cipher_text_file.read()
+# cipher_text_file.close()
+# print(data)
