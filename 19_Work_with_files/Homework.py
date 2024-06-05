@@ -70,6 +70,29 @@
 #
 # zen_file.close()
 #
-# print(f'Letters {letters}\nWords {words}\nStrings {strings}')
 # print(f'Letters {letters}\nWords {words}\nStrings {strings}\nMin letter {min_letter}')
 
+
+# Task 4. Files and folders
+#
+# import os
+#
+#
+# def path_info(path, dirs=[], files=[], size=[]):
+#     for i_elem in os.listdir(path):
+#         if os.path.isdir(os.path.join(path, i_elem)):
+#             dirs.append(1)
+#             path_info(os.path.join(path, i_elem))
+#         if os.path.isfile(os.path.join(path, i_elem)):
+#             files.append(1)
+#             size.append(os.path.getsize(os.path.join(path, i_elem)))
+#     return dirs, files, size
+#
+#
+# abs_path = os.path.abspath('')
+# print(abs_path)
+#
+# count_dirs, count_files, size_klb = path_info(abs_path)
+# print(f'Catalog size(klb): {sum(size_klb) / 1024}\n'
+#       f'Count of sub-catalogs: {sum(count_dirs)}\n'
+#       f'Count of files: {sum(count_files)}')
