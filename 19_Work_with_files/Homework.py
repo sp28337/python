@@ -96,3 +96,46 @@
 # print(f'Catalog size(klb): {sum(size_klb) / 1024}\n'
 #       f'Count of sub-catalogs: {sum(count_dirs)}\n'
 #       f'Count of files: {sum(count_files)}')
+
+
+# Task 5. Preservation
+# import os
+#
+#
+# def save_file(txt):
+#     user_path = input('\nWhere save the document? Input folder sequence(sep by space): ').split()
+#     relation_path = os.path.join(*user_path)
+#     if os.path.exists(os.path.abspath(os.path.join(os.path.sep, relation_path))):
+#         file_name = input('\nInput file name: ') + '.txt'
+#         abs_path = os.path.abspath(os.path.join(os.path.sep, relation_path, file_name))
+#         if os.path.exists(abs_path):
+#             user_approves = input(f'\nDo you really wanna resave file {file_name}? ')
+#             if user_approves in ('y', 'ye', 'yes', 'ya', 'es', 'yess', 'yyy'):
+#                 file_name_file = open(file_name, 'w', encoding='utf-8')
+#                 file_name_file.write(txt)
+#                 file_name_file.close()
+#                 result = '\nFile successfully resaved.'
+#                 return result, abs_path
+#         else:
+#             file_name_file = open(file_name, 'w', encoding='utf-8')
+#             file_name_file.write(txt)
+#             file_name_file.close()
+#             result = '\nFile successfully saved.'
+#             return result, abs_path
+#     else:
+#         result = '\nThere are not any path like that.'
+#         return result, None
+#
+#
+# text = input('Enter text: ')
+# new_file, path = save_file(text)
+# print(new_file)
+#
+# print('\nContent of file:')
+# if path:
+#     path_file = open(path)
+#     data = path_file.read()
+#     print(data)
+#     path_file.close()
+# else:
+#     print('Error')
