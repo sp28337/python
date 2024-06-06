@@ -225,3 +225,59 @@
 # first_tour_players_lst, to_second_tour_lst = get_data_from_file(os.path.abspath('first_tour.txt'))
 # make_file('second_tour.txt', to_second_tour_lst)
 # read_file('second_tour.txt')
+
+
+# Task 8. Frequency analysis
+import os
+#
+#
+# def my_sort(lst):
+#     """This function for sorting data"""
+#
+#     lst.sort(key=lambda x: x[1], reverse=True)
+#
+#     count_lst = list()
+#     for i, val in enumerate(lst):
+#         if i == len(lst):
+#             break
+#         else:
+#             if val[1] != lst[(i + 1) % len(lst)][1]:
+#                 count_lst.append(i)
+#
+#     for j, v in enumerate(count_lst):
+#         if j == 0:
+#             lst[:v + 1] = sorted(lst[:v + 1])
+#         else:
+#             lst[j + 1:v + 1] = sorted(lst[j + 1:v + 1], key=lambda z: z[0])
+#
+#
+# def make_list(dat):
+#     lst = list()
+#     for symbol in set(dat):
+#         if symbol not in lst and symbol != ' ':
+#             lst.append((symbol, str(round(dat.count(symbol) / len(''.join(dat.split())), 3))))
+#     return lst
+#
+#
+# text_file = open('text.txt')
+# data = text_file.read().lower()
+# text_file.close()
+#
+# print(f'\nContent of file text.txt:')
+# print(data)
+#
+# syms_list = make_list(data)
+# my_sort(syms_list)
+#
+# analysis_file = open('analysis.txt', 'w')
+# for index, value in enumerate(syms_list):
+#     analysis_file.write((value[0] + ' ' + value[1] + '\n'))
+# analysis_file.close()
+#
+#
+# analysis_file = open('analysis.txt')
+# data_analysis = analysis_file.read()
+# analysis_file.close()
+#
+# print(f'\nContent of file analysis.txt:')
+# print(data_analysis)
