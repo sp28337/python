@@ -281,3 +281,58 @@ import os
 #
 # print(f'\nContent of file analysis.txt:')
 # print(data_analysis)
+
+
+# Task 9. War and world
+#
+# import collections
+# import zipfile
+#
+#
+# def unzip(archive):
+#     zip_file = zipfile.ZipFile(archive, 'r')
+#     for i_file_name in zip_file.namelist():
+#         zip_file.extract(i_file_name)
+#     zip_file.close()
+#
+#
+# def collect_stats(name):
+#     result = {}
+#     if name.endswith('.zip'):
+#         unzip(name)
+#         name = ''.join((name[:-3], 'txt'))
+#     text_file = open(name, 'r', encoding='utf-8')
+#     for i_line in text_file:
+#         for j_char in i_line:
+#             if j_char.isalpha():
+#                 if j_char not in result:
+#                     result.setdefault(j_char, 0)
+#                 result[j_char] += 1
+#     text_file.close()
+#     return result
+#
+#
+# def print_stats(sts):
+#     print("+{:-^19}+".format('+'))
+#     print("|{: ^9}|{: ^9}|".format('word', 'frequency'))
+#     print("+{:-^19}+".format('+'))
+#     for char, count in sts.items():
+#         print("|{: ^9}|{: ^9}|".format(char, count))
+#     print("+{:-^19}+".format('+'))
+#
+#
+# def sort_by_frequency(stats_dct):
+#     sorted_values = sorted(stats_dct.values(), reverse=True)
+#     sorted_dct = collections.OrderedDict()
+#     for i_value in sorted_values:
+#         for j_key in stats_dct.keys():
+#             if stats_dct[j_key] == i_value:
+#                 sorted_dct.setdefault(j_key, stats_dct[j_key])
+#
+#     return sorted_dct
+#
+#
+# file_name = 'voina-i-mir.zip'
+# stats = collect_stats(file_name)
+# stats = sort_by_frequency(stats)
+# print_stats(stats)
