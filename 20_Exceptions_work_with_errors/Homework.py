@@ -206,3 +206,65 @@
 #
 #
 # main()
+
+
+# Task 7. Text calculater 2
+#
+#
+# def fix_function(*args):
+#     print(f'Error was detected in the line <{' '.join(args)}>. Do you wanna fix? ', end='')
+#     user_answer = input()
+#     if user_answer in ('y', 'yes', 'ya', 'yah', 'ok', 'yess', 'yees', 'да', '1'):
+#         fix_str = input('Enter fixed string: ')
+#         fix_res = line_validation(*fix_str.split())
+#     else:
+#         fix_res = 0
+#     return fix_res
+#
+#
+# def do_operation(n1, operation, n2):
+#     res = 0
+#     if operation == '+':
+#         res = n1 + n2
+#     elif operation == '-':
+#         res = n1 - n2
+#     elif operation == '*':
+#         res = n1 * n2
+#     elif operation == '/':
+#         res = n1 / n2
+#     elif operation == '//':
+#         res = n1 // n2
+#     elif operation == '%':
+#         res = n1 % n2
+#     elif operation == '**':
+#         res = n1 ** n2
+#
+#     return res
+#
+#
+# def line_validation(*args):
+#     try:
+#         if len(args) == 3:
+#             if ''.join((args[0], args[2])).isdigit():
+#                 if args[1] in ('+', '-', '*', '**', '/', '//', '%'):
+#                     result = do_operation(int(args[0]), args[1], int(args[2]))
+#                 else:
+#                     raise ValueError
+#             else:
+#                 raise TypeError
+#         else:
+#             raise IndexError
+#
+#     except (IndexError, TypeError, ValueError):
+#         result = fix_function(*args)
+#     return result
+#
+#
+# summ = 0
+# path_to_file = 'calc.txt'
+# with open(path_to_file, 'r', encoding='utf-8') as file:
+#     for line in file:
+#         res = line_validation(*line.split())
+#         summ += res
+#
+# print(summ)
