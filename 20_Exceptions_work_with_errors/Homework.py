@@ -138,3 +138,44 @@
 # with open('registration_bad.log', 'r') as reg_bad_file:
 #     data = reg_bad_file.read()
 #     print(data)
+
+
+# Task 5. Text calculater
+#
+# def calc_func(lst, res=None):
+#     try:
+#         if len(lst) == 3:
+#             if lst[1] == '+':
+#                 res = int(lst[0]) + int(lst[2])
+#             elif lst[1] == '-':
+#                 res = int(lst[0]) - int(lst[2])
+#             elif lst[1] == '*':
+#                 res = int(lst[0]) * int(lst[2])
+#             elif lst[1] == '/':
+#                 res = int(lst[0]) / int(lst[2])
+#             elif lst[1] == '//':
+#                 res = int(lst[0]) // int(lst[2])
+#             elif lst[1] == '%':
+#                 res = int(lst[0]) % int(lst[2])
+#             elif lst[1] == '**':
+#                 res = int(lst[0]) ** int(lst[2])
+#             else:
+#                 raise KeyboardInterrupt
+#         else:
+#             raise ValueError
+#     except ValueError:
+#         res = 0
+#     except KeyboardInterrupt:
+#         res = 0
+#     finally:
+#         return res
+#
+#
+# summ = 0
+# path_to_file = 'calc.txt'
+# with open(path_to_file, 'r', encoding='utf-8') as file:
+#     for line in file:
+#         result = calc_func(line.split())
+#         summ += result
+#
+# print(summ)
