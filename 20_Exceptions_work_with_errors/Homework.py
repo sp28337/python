@@ -26,3 +26,46 @@
 #
 # total_length = find_total_length('people.txt')
 # print(total_length)
+
+
+# Task 2. Coordinates
+#
+# import random
+#
+#
+# def division_x_y(x, y):
+#     try:
+#         x += random.randint(0, 10)
+#         y += random.randint(0, 5)
+#         res = round((x / y), 2)
+#         return res
+#     except ZeroDivisionError:
+#         return 0
+#
+#
+# def division_y_x(x, y):
+#     try:
+#         x -= random.randint(0, 10)
+#         y -= random.randint(0, 5)
+#         res = round((y / x), 2)
+#         return res
+#     except ZeroDivisionError:
+#         return 0
+#
+#
+# try:
+#     with open('coordinates.txt', 'r') as file:
+#         for line in file:
+#             nums_list = line.split()
+#             res1 = division_x_y(int(nums_list[0]), int(nums_list[1]))
+#             res2 = division_y_x(int(nums_list[0]), int(nums_list[1]))
+#             number = random.randint(0, 100)
+#             with open('result.txt', 'a') as file_2:
+#                 my_list = sorted([str(res1), str(res2), str(number)])
+#                 file_2.write(' '.join(my_list) + '\n')
+#         else:
+#             with open('result.txt', 'a') as file_2:
+#                 file_2.write('\n')
+#
+# except FileNotFoundError:
+#     print('Error. File not found!')
