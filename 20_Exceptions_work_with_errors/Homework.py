@@ -87,4 +87,54 @@
 #         break
 #     with open('numbers.log', 'a', encoding='utf-8') as numbers_file:
 #         numbers_file.write(str(user_num) + '\n'
- 
+
+
+# Task 4. Registration
+#
+#
+# def check_errors(string):
+#     name, mail, age = string.split()
+#     if len(string.split()) != 3:
+#         raise ValueError
+#     if not name.isalpha():
+#         raise NameError
+#     if not ('@' in mail and '.' in mail):
+#         raise SyntaxError
+#     if not 10 <= int(age) <= 99:
+#         raise ValueError
+#
+#
+# def check_file(path):
+#     with open(path, 'r', encoding='utf-8') as file:
+#         for line in file:
+#             try:
+#                 check_errors(line)
+#             except ValueError:
+#                 error = '<ValueError> Field age is not between 10 to 99'
+#                 with open('registration_bad.log', 'a') as registration_bad_file:
+#                     registration_bad_file.write(' - '.join((line[:-1], error)) + '\n')
+#             except SyntaxError:
+#                 error = '<SyntaxError> Field email does not contain <@> or <.>.'
+#                 with open('registration_bad.log', 'a') as registration_bad_file:
+#                     registration_bad_file.write(' - '.join((line[:-1], error)) + '\n')
+#             except NameError:
+#                 error = '<NameError> Name consists of not only letters.'
+#                 with open('registration_bad.log', 'a') as registration_bad_file:
+#                     registration_bad_file.write(' - '.join((line[:-1], error)) + '\n')
+#             else:
+#                 with open('registration_good.log', 'a') as registration_good_file:
+#                     reg_good_file.write(line)
+#
+#
+# path_to_file = 'registration.txt'
+# check_file(path_to_file)
+#
+# print('Content of registration_good.log:')
+# with open('registration_good.log', 'r') as reg_good_file:
+#     data = reg_good_file.read()
+#     print(data)
+# print()
+# print('Content of registration_bad.log:')
+# with open('registration_bad.log', 'r') as reg_bad_file:
+#     data = reg_bad_file.read()
+#     print(data)
