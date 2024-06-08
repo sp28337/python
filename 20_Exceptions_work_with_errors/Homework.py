@@ -69,3 +69,22 @@
 #
 # except FileNotFoundError:
 #     print('Error. File not found!')
+
+
+# # Task 3. Happy number
+# import random
+#
+# summ = 0
+# while summ < 777:
+#     user_num = int(input('Enter random number: '))
+#     summ += user_num
+#     random_num = random.randint(1, 13)
+#     try:
+#         if random_num == 1:
+#             raise Exception
+#     except Exception:
+#         print('Error, you are so unlucky!')
+#         break
+#     with open('numbers.log', 'a', encoding='utf-8') as numbers_file:
+#         numbers_file.write(str(user_num) + '\n'
+ 
