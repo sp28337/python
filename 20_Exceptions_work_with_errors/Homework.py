@@ -184,9 +184,9 @@
 # Task 6. Chat
 #
 # def main():
+#     user_name = input('Enter user name: ')
 #     while True:
 #         try:
-#             user_name = input('Enter user name: ')
 #             print('\nMENU\n[1] - Watch current chat\n[2] - Send a message\n')
 #             user_action = input('Choose what to do: ')
 #             if user_action in ('1', '[1]', 'one', 'first', 'f'):
@@ -196,7 +196,7 @@
 #             elif user_action in ('2', '[2]', 'two', 'second', 's'):
 #                 message = input('Enter message: ')
 #                 with open('chat.txt', 'a', encoding='utf-8') as file:
-#                     file.write('{0} -> {1}{2}'.format(user_name, message, '\n'))
+#                     file.write('{0} -> {1}\n'.format(user_name, message))
 #             else:
 #                 raise ValueError
 #         except FileNotFoundError:
