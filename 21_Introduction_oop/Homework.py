@@ -54,3 +54,51 @@
 #         if warrior1.got_damage():
 #             warrior2.info()
 #             break
+
+
+# Task 2. Students
+#
+# from random import randint
+# from statistics import mean
+#
+#
+# class Student:
+#
+#     def __init__(self, name_surname, team, performance=None):
+#         self.name_surname = name_surname
+#         self.team = team
+#         self.performance = [randint(3, 5) for _ in range(5)]
+#
+#     def info(self):
+#         print('Name/Surname: {}\n'
+#               'Team number: {}\n'
+#               'Performance: {}\n'.format(self.name_surname, self.team, self.performance))
+#
+#     def student_data(self):
+#         data = self.name_surname, self.team, self.performance
+#         return data
+#
+#
+# students_list = [] #('Pavel Tarakanov', 1, [4, 5, 3, 3, 3]),
+#                    # ('Kristina Tarakanova', 1, [4, 4, 3, 5, 5]),
+#                    # ('Egor Tarakanov', 1, [4, 4, 5, 3, 4]),
+#                    # ('Nikita Reikch', 2, [4, 4, 3, 5, 4]),
+#                    # ('Ivan Pavlov', 3, [3, 4, 3, 4, 4]),
+#                    # ('Dima Moiseenko', 2, [5, 3, 3, 5, 5]),
+#                    # ('Lesik Dzivinskiy', 3, [3, 4, 3, 3, 5]),
+#                    # ('Roma Kuliev', 4, [5, 4, 3, 5, 5]),
+#                    # ('Vovan Kokin', 5, [4, 5, 4, 3, 4]),
+#                    # ('Sasha Tovarkov', 1, [4, 3, 5, 4, 4])
+#
+#
+# for student in range(10):
+#     students_list.append(Student(input('Enter name: '), int(input('Enter team number: '))).student_data())
+#     print()
+#
+# print(*students_list)
+# students_list.sort(key=lambda average: mean(average[2]), reverse=True)
+#
+# print()
+#
+# for student in students_list:
+#     print(student, end='\n')
