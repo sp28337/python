@@ -102,3 +102,47 @@
 #
 # for student in students_list:
 #     print(student, end='\n')
+
+
+# Task 3. Circle
+#
+# import math
+#
+#
+# class Circle:
+#     def __init__(self, x=0, y=0, radius=1):
+#         self.x = x
+#         self.y = y
+#         self.radius = radius
+#
+#     def info(self):
+#         print('--INFO--\nCenter of the circle: ({}, {})\nRadius: {}\n'.format(self.x, self.y, self.radius))
+#
+#     def find_area(self):
+#         area = math.pi * math.pow(self.radius, 2)
+#         print(area)
+#         return area
+#
+#     def find_perimeter(self):
+#         c = 2 * math.pi * self.radius
+#         return c
+#
+#     def increase_in(self, times):
+#         self.radius *= times
+#
+#     def is_intersection(self, other):
+#         distance = math.sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
+#         return distance < self.radius + other.radius
+#
+#
+# circle1 = Circle(0, 0, 1)
+# circle1.info()
+#
+# circle2 = Circle(1, 5, 5)
+# circle2.info()
+#
+#
+# if circle2.is_intersection(circle1):
+#     print('Intersection')
+# else:
+#     print('Not intersection')
