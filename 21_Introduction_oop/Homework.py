@@ -236,3 +236,102 @@
 #
 # parent2.calm_child(child2)
 # child2.info()
+
+
+# Task 5. Happy farm 2
+#
+# crop = []
+#
+#
+# class Gardener:
+#     def __init__(self, name, garden):
+#         self.name = name
+#         self.garden = garden
+#         print('New gardener hired!')
+#
+#     def info(self):
+#         print('Name: {}\nGarden: {}\n'.format(self.name, self.garden.name))
+#
+#     def care_garden(self):
+#         if not all([i_potato.is_ripe() for i_potato in self.garden.potatoes]):
+#             print('Gardener {} taking care of the {}'.format(self.name, self.garden.name))
+#             print('(in process...)')
+#             self.garden.grow_all()
+#             print()
+#         else:
+#             print('Planting new potatoes...\n')
+#             self.garden.potatoes = [Potato(index) for index in range(1, self.garden.count + 1)]
+#
+#     def harvest(self):
+#         if all([i_potato.is_ripe() for i_potato in self.garden.potatoes]):
+#             result = 5 * self.garden.count
+#             self.garden.count = 0
+#             self.garden.potatoes = [Potato(0) for index in range(0)]
+#             print(self.garden.potatoes)
+#             print('Your yield is: {}\nNow you can plant new potatoes!\n'.format(result))
+#             return result
+#         else:
+#             print('Potato does not ripe yet! You should take care about your garden!\n')
+#
+#
+# class Potato:
+#     states = {0: 'seedling', 1: 'crossbreed', 2: 'flowering', 3: 'ripe'}
+#
+#     def __init__(self, index):
+#         self.index = index
+#         self.state = 0
+#
+#     def grow(self):
+#         if self.state < 3:
+#             self.state += 1
+#         self.print_state()
+#
+#     def is_ripe(self):
+#         if self.state == 3:
+#             return True
+#         return False
+#
+#     def print_state(self):
+#         print('Potato {} now {}'.format(self.index, Potato.states[self.state]))
+#
+#
+# class PotatoGarden:
+#
+#     def __init__(self, count=0):
+#         self.count = count
+#         self.name = 'Potato_garden'
+#         self.potatoes = [Potato(index) for index in range(1, count + 1)]
+#
+#     def grow_all(self):
+#         print('Potato growing up!')
+#         for i_potato in self.potatoes:
+#             i_potato.grow()
+#
+#     def are_all_ripe(self):
+#         if PotatoGarden().potatoes:
+#             if not all([i_potato.is_ripe() for i_potato in self.potatoes]):
+#                 print('Potato does not ripe yet!\n')
+#             else:
+#                 print('All potatoes is ripe!\n')
+#         else:
+#             print('Garden is not planted!\n')
+#
+#
+# my_garden = PotatoGarden(5)
+# my_garden.are_all_ripe()
+# for _ in range(1):
+#     my_garden.grow_all()
+#     my_garden.are_all_ripe()
+#
+# gardener = Gardener('Oleg', my_garden)
+# gardener.info()
+# gardener.care_garden()
+# gardener.harvest()
+# gardener.care_garden()
+# crop.append(gardener.harvest())
+#
+# my_garden.are_all_ripe()
+# gardener.care_garden()
+# gardener.care_garden()
+# my_garden = PotatoGarden(10)
+# gardener.care_garden()
