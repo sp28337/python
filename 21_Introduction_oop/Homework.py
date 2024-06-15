@@ -146,3 +146,93 @@
 #     print('Intersection')
 # else:
 #     print('Not intersection')
+
+
+# Task 4. Fathers, mothers, children
+#
+# from random import randint
+#
+#
+# class Parent:
+#     child_lst = []
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         print('(Parent {0} initialized)'.format(self.name))
+#
+#     def info(self):
+#         print('[Current info about {}]'.format(self.name))
+#         print('Name: {}\n'
+#               'Age: {}\n'
+#               'Children list: {}\n'.format(self.name, self.age, self.child_lst)
+#               )
+#
+#     def calm_child(self, other):
+#         if other.mood < 3:
+#             print('{} trying to calm the {} down'.format(self.name, other.name))
+#             print('(in process...)')
+#             if randint(0, 1):
+#                 print('{} successfully calmed the child!'.format(self.name))
+#                 print('{} feel much better! Mood changed <{}> --> <{}>\n'.format(other.name,
+#                                                                                  other.mood_dict[other.mood],
+#                                                                                  other.mood_dict[other.mood + 1]))
+#                 other.mood += 1
+#             else:
+#                 print('{} could not calm the child down!\n'.format(self.name))
+#         else:
+#             print('The child is already in a good mood.\n')
+#
+#     def feed_child(self, other):
+#         if other.hungry:
+#             other.hungry = False
+#             other.mood = 3
+#
+#             print('Parent {} fed the {}\n'.format(self.name, other.name))
+#         else:
+#             print('{} does not hungry!'.format(other.name))
+#
+#
+# class Child:
+#     mood_dict = {0: 'awful', 1: 'bad', 2: 'satisfied', 3: 'glad', 4: 'happy'}
+#
+#     def __init__(self, name, age, mood=2, hungry=0):
+#         self.name = name
+#         self.age = age
+#         self.mood = mood
+#         if self.mood in (0, 1):
+#             self.hungry = bool(1)
+#         else:
+#             self.hungry = bool(0)
+#         Parent.child_lst.append(self.data())
+#         print('(Child {0} initialized)'.format(self.name))
+#
+#     def data(self):
+#         data = (self.name, self.age)
+#         return data
+#
+#     def info(self):
+#         print('[Current info about {}]'.format(self.name))
+#         print('Name: {}\n'
+#               'Age: {}\n'
+#               'Mood: {}\n'
+#               'Hungry: {}\n'.format(self.name, self.age, Child.mood_dict[self.mood], self.hungry)
+#               )
+#
+#
+# child1 = Child('Alisa', 4, 2)
+# child1.info()
+# child2 = Child('Alik', 14, 1)
+# child2.info()
+#
+# print()
+#
+# parent1 = Parent('Ivan', 30)
+# parent1.info()
+# parent2 = Parent('Nikita', 31)
+# parent2.info()
+#
+# print()
+#
+# parent2.calm_child(child2)
+# child2.info()
