@@ -335,3 +335,73 @@
 # gardener.care_garden()
 # my_garden = PotatoGarden(10)
 # gardener.care_garden()
+
+
+# Task 6. Magic
+#
+# class Magic:
+#
+#     help = ('     ВИДЫ МАГИИ',
+#             'Вода + Воздух = Шторм',
+#             'Вода + Огонь = Пар',
+#             'Вода + Земля = Грязь',
+#             'Воздух + Огонь = Молния',
+#             'Воздух + Земля = Пыль',
+#             'Огонь + Земля = Лава\n')
+#
+#     def __init__(self, name):
+#         self.name = name
+#         print('[+] ({} initialized)'.format(self.name))
+#
+#     def __add__(self, other):
+#         if isinstance(other, Magic):
+#             if self.name == 'Water':
+#                 if other.name == 'Air':
+#                     return Magic('Storm')
+#                 elif other.name == 'Fire':
+#                     return Magic('Steam')
+#                 elif other.name == 'Ground':
+#                     return Magic('ground')
+#             elif self.name == 'Air':
+#                 if other.name == 'Fire':
+#                     return Magic('Lightning')
+#                 elif other.name == 'Ground':
+#                     return Magic('Dust')
+#                 elif other.name == 'Water':
+#                     return Magic('Storm')
+#             elif self.name == 'Fire':
+#                 if other.name == 'Ground':
+#                     return Magic('Lava')
+#                 if other.name == 'Air':
+#                     return Magic('Lightning')
+#                 elif other.name == 'Water':
+#                     return Magic('Steam')
+#
+#             elif self.name == 'Ground':
+#                 if other.name == 'Fire':
+#                     return Magic('Lava')
+#                 elif other.name == 'Air':
+#                     return Magic('Dust')
+#                 elif other.name == 'Water':
+#                     return Magic('Dirt')
+#         else:
+#             raise ValueError('Right operand must be Magi')
+#
+#     def __radd__(self, other):
+#         return self.__add__(other)
+#
+#     def info(self):
+#         print('\n---INFO---\nName: {}\n'.format(self.name))
+#
+#
+# water = Magic('Water')
+# air = Magic('Air')
+# fire = Magic('Fire')
+# ground = Magic('Ground')
+#
+# print()
+#
+# storm = air + water
+# storm.info()
+# print('\n'.join(Magic.help))
+# lava = fire + ground
