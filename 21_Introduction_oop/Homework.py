@@ -339,69 +339,333 @@
 
 # Task 6. Magic
 #
-# class Magic:
-#
-#     help = ('     ВИДЫ МАГИИ',
-#             'Вода + Воздух = Шторм',
-#             'Вода + Огонь = Пар',
-#             'Вода + Земля = Грязь',
-#             'Воздух + Огонь = Молния',
-#             'Воздух + Земля = Пыль',
-#             'Огонь + Земля = Лава\n')
-#
-#     def __init__(self, name):
-#         self.name = name
-#         print('[+] ({} initialized)'.format(self.name))
+# class Water:
+#     def __str__(self):
+#         return 'Water'
 #
 #     def __add__(self, other):
-#         if isinstance(other, Magic):
-#             if self.name == 'Water':
-#                 if other.name == 'Air':
-#                     return Magic('Storm')
-#                 elif other.name == 'Fire':
-#                     return Magic('Steam')
-#                 elif other.name == 'Ground':
-#                     return Magic('ground')
-#             elif self.name == 'Air':
-#                 if other.name == 'Fire':
-#                     return Magic('Lightning')
-#                 elif other.name == 'Ground':
-#                     return Magic('Dust')
-#                 elif other.name == 'Water':
-#                     return Magic('Storm')
-#             elif self.name == 'Fire':
-#                 if other.name == 'Ground':
-#                     return Magic('Lava')
-#                 if other.name == 'Air':
-#                     return Magic('Lightning')
-#                 elif other.name == 'Water':
-#                     return Magic('Steam')
-#
-#             elif self.name == 'Ground':
-#                 if other.name == 'Fire':
-#                     return Magic('Lava')
-#                 elif other.name == 'Air':
-#                     return Magic('Dust')
-#                 elif other.name == 'Water':
-#                     return Magic('Dirt')
+#         if isinstance(other, Air):
+#             return Storm()
+#         elif isinstance(other, Fire):
+#             return Vapor()
+#         elif isinstance(other, Earth):
+#             return Dirt()
 #         else:
-#             raise ValueError('Right operand must be Magi')
+#             return None
 #
-#     def __radd__(self, other):
-#         return self.__add__(other)
+#
+# class Air:
+#     def __str__(self):
+#         return 'Air'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Water):
+#             return Storm()
+#         elif isinstance(other, Fire):
+#             return Lightning()
+#         elif isinstance(other, Earth):
+#             return Dust()
+#         else:
+#             return None
+#
+#
+# class Fire:
+#     def __str__(self):
+#         return 'Fire'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Air):
+#             return Lightning()
+#         elif isinstance(other, Water):
+#             return Vapor()
+#         elif isinstance(other, Earth):
+#             return Lava()
+#         else:
+#             return None
+#
+#
+# class Earth:
+#     def __str__(self):
+#         return 'Earth'
+#
+#     def __add__(self, other):
+#         if isinstance(other, Air):
+#             return Dust()
+#         elif isinstance(other, Fire):
+#             return Lava()
+#         elif isinstance(other, Water):
+#             return Dirt()
+#         else:
+#             return None
+#
+#
+# class Storm:
+#     def __str__(self):
+#         return 'Storm'
+#
+#
+# class Vapor:
+#     def __str__(self):
+#         return 'Vapor'
+#
+#
+# class Dirt:
+#     def __str__(self):
+#         return 'Dirt'
+#
+#
+# class Lightning:
+#     def __str__(self):
+#         return 'Lightning'
+#
+#
+# class Dust:
+#     def __str__(self):
+#         return 'Dust'
+#
+#
+# class Lava:
+#     def __str__(self):
+#         return 'Lava'
+#
+#
+# water = Water()
+# air = Air()
+# fire = Fire()
+# earth = Earth()
+#
+# print(air + water)
+# print(earth + water)
+# print(fire + water)
+# print(water + fire)
+# print(fire + earth)
+# print(fire + air)
+
+
+# Task 7. Cohabitation
+#
+# from random import randint
+#
+#
+# class Person:
+#
+#     def __init__(self, name, home, satiety=50):
+#         self.name = name
+#         if isinstance(home, House):
+#             self.home = home
+#         else:
+#             raise ValueError('<home> must be class object House.')
+#         self.satiety = satiety
+#         print('{} INITIALIZED'.format(self.name))
 #
 #     def info(self):
-#         print('\n---INFO---\nName: {}\n'.format(self.name))
+#         print('INFO {}\nSatiety: {}'.format(self.name, self.satiety))
+#
+#     def __str__(self):
+#         return '{} INITIALIZED'.format(self.name)
+#
+#     def eat(self):
+#         if self.home.food >= 10:
+#             print('{} is eating...'.format(self.name))
+#             self.satiety += 10
+#             self.home.food -= 10
+#
+#         else:
+#             self.satiety += self.home.food
+#             self.home.food = 0
+#
+#     def work(self):
+#         self.satiety -= 10
+#         self.home.money += 10
+#
+#     def play(self):
+#         print('{} is playing.'.format(self.name))
+#         self.satiety -= 10
+#
+#     def go_store(self):
+#         if self.home.money >= 10:
+#             self.home.food += 10
+#             self.home.money -= 10
+#
+#     def live(self):
+#         rand_cub_num = randint(1, 6)
+#         if self.satiety < 0:
+#             print('{} died due to hunger!'.format(self.name))
+#             return False
+#         if self.satiety < 20 and self.home.food >= 10:
+#             self.eat()
+#
+#         elif self.home.food < 10 and self.home.money > 0:
+#             self.go_store()
+#             print('{} go shop.'.format(self.name))
+#
+#         elif self.home.money < 50:
+#             self.work()
+#
+#         elif rand_cub_num == 1:
+#             self.work()
+#
+#         elif rand_cub_num == 2:
+#             self.eat()
+#
+#         else:
+#             self.play()
+#         return True
 #
 #
-# water = Magic('Water')
-# air = Magic('Air')
-# fire = Magic('Fire')
-# ground = Magic('Ground')
+# class House:
 #
-# print()
+#     def __init__(self, food=50, money=0):
+#         self.food = food
+#         self.money = money
 #
-# storm = air + water
-# storm.info()
-# print('\n'.join(Magic.help))
-# lava = fire + ground
+#
+# def simulate_life(days):
+#     home1 = House()
+#     alex = Person('Alex', home1)
+#     ivan = Person('Ivan', home1)
+#
+#     for day in range(1, days + 1):
+#         print('Day', day)
+#         alex_alive = alex.live()
+#         ivan_alive = ivan.live()
+#
+#         if not alex_alive or not ivan_alive:
+#             print('Experiment finished earlier!')
+#             break
+#
+#         print(f'{alex.name}:\nsatiety - {alex.satiety}\nmoney - {alex.home.money}')
+#         print(f'{ivan.name}:\nsatiety - {ivan.satiety}\nmoney - {ivan.home.money}')
+#
+#     else:
+#         print('Both people lived 365 days!')
+#
+#
+# simulate_life(365)
+#
+
+# from random import randint
+#
+#
+# class Person:
+#
+#     def __init__(self, name, house, satiety=50, alive=True):
+#         self.name = name
+#         self.alive = alive
+#         if isinstance(house, House):
+#             self.house = house
+#         else:
+#             raise ValueError("<house> must be object of <House> class")
+#         self.satiety = satiety
+#         print('-(Person {} initialized)-'.format(self.name))
+#
+#     def status(self):
+#         print('<{0}> INFO\n'
+#               'Name: {0}\n'
+#               'Satiety: {1}\n'
+#               'Money in house: {2}\n'
+#               'Food in house: {3}\n'.format(self.name, self.satiety, self.house.money, self.house.food)
+#               )
+#
+#     def eat(self):
+#         if self.house.food > 0:
+#             print('{} is eating...'.format(self.name))
+#             self.satiety += randint(1, 6)
+#             print('[+] Satiety up!')
+#             self.house.food -= randint(1, 6)
+#             print('[-] Food runs out!\n')
+#         else:
+#             print('(Frighten is empty) {} is starving\n'.format(self.name))
+#             self.go_store()
+#         self.status()
+#
+#     def work(self):
+#         if self.satiety > 5:
+#             print('{} is working...'.format(self.name))
+#             self.satiety -= randint(1, 6)
+#             print('[-] Satiety runs out!')
+#             self.house.money += 5
+#             print('[+] Earned!\n')
+#         else:
+#             self.eat()
+#         self.status()
+#
+#     def play(self):
+#         print('{} is playing...'.format(self.name))
+#         self.satiety -= randint(1, 6)
+#         print('[-] Satiety runs out!\n')
+#         # self.status()
+#
+#     def go_store(self):
+#         if self.house.money > 0:
+#             print('{} went to store...'.format(self.name))
+#             self.house.money -= randint(1, 6)
+#             print('[-] Money runs out!')
+#             self.house.food += randint(1, 6)
+#             print('[+] Food up!\n')
+#         else:
+#             self.satiety -= randint(1, 6)
+#             print('[-] Satiety runs out!\n')
+#             print('(Wallet is empty...) {} may not get purchases!'.format(self.name))
+#         self.status()
+#
+#
+# class House:
+#
+#     def __init__(self, number, food=50, money=0):
+#         self.number = number
+#         self.food = food
+#         self.money = money
+#         print('--(House {} initialized)--'.format(self.number))
+#
+#     def info(self):
+#         print('HOUSE\n'
+#               'Fridge: {} food\n'
+#               'Wallet: {}$\n'.format(self.food, self.money)
+#               )
+#
+#
+# def logic_people(person):
+#     if person.satiety >= 0:
+#         random_number = randint(1, 6)
+#         if person.satiety < 20:
+#             person.eat()
+#         elif person.house.food < 10:
+#             person.go_store()
+#         elif person.house.money < 50:
+#             person.work()
+#         elif random_number == 1:
+#             person.work()
+#         elif random_number == 2:
+#             person.eat()
+#         else:
+#             person.play()
+#     else:
+#         print('\n\n{} DIED!!!\n\n'.format(person.name))
+#         person.alive = False
+#
+#
+# leskin_house = House(2, 50)
+# leskin_house.info()
+#
+# lesik = Person('Lesik', leskin_house, 20)
+# lesik.status()
+#
+# alena = Person('Alena', leskin_house)
+# alena.status()
+#
+# days = 0
+#
+# while True:
+#     if days > 365:
+#         print('!!! Experimental subjects are alive after {} days experiment !!!'.format(days))
+#         break
+#     print('Day number - {}'.format(days))
+#     if lesik.alive or alena.alive:
+#         if lesik.alive:
+#             logic_people(lesik)
+#         if alena.alive:
+#             logic_people(alena)
+#     else:
+#         break
+#     days += 1
