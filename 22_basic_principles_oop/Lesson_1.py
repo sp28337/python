@@ -48,3 +48,53 @@
 #     print(point2.get_y())
 # except ValueError as e:
 #     print(e)
+
+
+# Task 2. Human
+#
+# class Human:
+#     __count = 0
+#
+#     def __init__(self, name, age):
+#         self.set_name(name)
+#         self.set_age(age)
+#         self.__count += 1
+#         print('(Human object was initialized)')
+#
+#     def __str__(self):
+#         return '{}'.format(self.__name)
+#
+#     def set_name(self, name):
+#         if isinstance(name, str) and name.isalpha():
+#             self.__name = name
+#         else:
+#             raise ValueError('The <name> argument must contain only letters.')
+#
+#     def set_age(self, age):
+#         if isinstance(age, int) and (0 <= age <= 100):
+#             self.__age = age
+#         else:
+#             raise ValueError('The <age> argument must be a value between 0 to 100.')
+#
+#     def get_count(self):
+#         return Human.__count
+#
+#     def get_name(self):
+#         return self.__name
+#
+#     def get_age(self):
+#         return self.__age
+#
+#
+# try:
+#     artem = Human('Artem', 29)
+#     print(artem)
+#     print(artem.get_count())
+#     print(artem.get_name())
+#     artem.set_name('Gog')
+#     print(artem.get_name())
+#     print(artem.get_age())
+#     artem.set_age("a")
+#     print(artem.get_age())
+# except Exception as e:
+#     print(e)
