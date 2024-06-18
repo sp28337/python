@@ -669,3 +669,114 @@
 #     else:
 #         break
 #     days += 1
+
+
+# Task 8. Black-Jack
+#
+# import random
+#
+#
+# class CardDeck:
+#
+#     def __init__(self):
+#         self.card_deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', True] * 4
+#         random.shuffle(self.card_deck)
+#
+#     def take_card(self):
+#         return self.card_deck.pop()
+#
+#     def shuffle_cards(self):
+#         random.shuffle(self.card_deck)
+#
+#
+# def main_menu():
+#     print('***[COMMANDS]***\n'
+#           '<START> --- play Black-Jack\n'
+#           '<OUT> --- exit app\nEnter a command:', end=' '
+#           )
+#     command = input().lower()
+#     if command in ('start', 's'):
+#         start_game()
+#
+#
+# def start_game():
+#     my_cards, ai_cards = [], []
+#     points = 0
+#     card_deck = CardDeck()
+#
+#     print('\nWelcome back to Black-JacK!')
+#     print('...dealing cards...\n')
+#
+#     for _ in range(2):
+#         my_cards.append(card_deck.take_card())
+#         ai_cards.append(card_deck.take_card())
+#     print('Your cards: {}'.format(my_cards))
+#     points = check_my_points(my_cards)
+#     print('Your points: {}\n'.format(points))
+#     while True:
+#         if points > 20:
+#             print('Yor points is: {}'.format(points))
+#             ai_score = ai_points(ai_cards)
+#             print('AI points is: {}'.format(ai_score))
+#             if ai_score > points:
+#                 print('---YOU LOOSE---\n')
+#             elif ai_score < points:
+#                 print('!!!---YOU WIN---!!!\n')
+#             else:
+#                 print('???--DRAW---???\n')
+#             main_menu()
+#         else:
+#             user_move = input('Take another card? ')
+#             if user_move in ('y', 'yes'):
+#                 my_cards.append(card_deck.take_card())
+#                 points = check_my_points(my_cards)
+#                 print('My score: {}'.format(points))
+#             else:
+#                 print('\n***[RESULTS]***\n')
+#                 print('Yor points is: {}'.format(points))
+#                 ai_score = ai_points(ai_cards)
+#                 print('AI points is: {}'.format(ai_score))
+#                 if ai_score > points:
+#                     print('---YOU LOOSE---\n')
+#                 elif ai_score < points:
+#                     print('!!!---YOU WIN---!!!\n')
+#                 else:
+#                     print('???--DRAW---???\n')
+#                 main_menu()
+#
+#
+# def check_my_points(lst):
+#     score = 0
+#     for card in lst:
+#         if isinstance(card, int):
+#             score += card
+#         elif isinstance(card, str):
+#             score += 10
+#         elif isinstance(card, bool):
+#             if score <= 10:
+#                 score += 11
+#             else:
+#                 score += 1
+#     return score
+#
+#
+# def ai_points(lst):
+#     score = 0
+#     for card in lst:
+#         if isinstance(card, int):
+#             score += card
+#         elif isinstance(card, str):
+#             score += 10
+#         elif isinstance(card, bool):
+#             if score <= 10:
+#                 score += 11
+#             else:
+#                 score += 1
+#     return score
+#
+#
+# def results(sc, ai):
+#     print('You got {} points\nAI got {} points'.format(sc, ai))
+#
+#
+# main_menu()
