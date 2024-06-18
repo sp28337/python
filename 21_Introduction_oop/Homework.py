@@ -780,3 +780,69 @@
 #
 #
 # main_menu()
+
+
+# Task 9. XO
+#
+#
+# board_places = list(range(1, 10))
+#
+#
+# def draw_board(board):
+#     print('-' * 13)
+#     for row in range(3):
+#         print('| {0} | {1} | {2} |'.format(board[row * 3 + 0], board[row * 3 + 1], board[row * 3 + 2]))
+#         print('-' * 13)
+#
+#
+# def take_input(player_token):
+#     valid = False
+#     while not valid:
+#         player_answer = input('Where to put {}? '.format(player_token))
+#         try:
+#             player_answer = int(player_answer)
+#         except ValueError:
+#             print('Incorrect type! Are you sure that entered an int?')
+#             continue
+#         if 1 <= player_answer <= 9:
+#             if str(board_places[player_answer - 1]) not in 'XO':
+#                 board_places[player_answer - 1] = player_token
+#                 valid = True
+#             else:
+#                 print('This place is beasy!')
+#         else:
+#             print('Incorrect number of place! Must be from 1 to 9.')
+#
+#
+# def check_win(board):
+#     win_places = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+#     for each in win_places:
+#         if board[each[0]] == board[each[1]] == board[each[2]]:
+#             return board[each[0]]
+#     return False
+#
+#
+# def main(board):
+#     counter = 0
+#     win = False
+#     while not win:
+#         draw_board(board_places)
+#         if counter % 2 == 0:
+#             take_input('X')
+#         else:
+#             take_input('O')
+#         counter += 1
+#
+#         tmp = check_win(board_places)
+#         if tmp:
+#             print(tmp, 'win!')
+#             win = True
+#             break
+#         elif tmp == 9:
+#             print('Draw!')
+#             break
+#     draw_board(board_places)
+#
+#
+# main(board_places)
+# input("Press Enter to out!")
