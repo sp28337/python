@@ -5,10 +5,7 @@
 #         self.model = model
 #
 #     def __str__(self):
-#         return "{}".format(self.model)
-#
-#     def info(self):
-#         print('Ship model is {}'.format(self.model))
+#         return "Model: {}".format(self.model)
 #
 #     def sail(self):
 #         print('Ship {} is sailing somewhere.'.format(self.model))
@@ -16,9 +13,8 @@
 #
 # class WarShip(Ship):
 #     def __init__(self, model, guns):
-#         super().__init__(self)
+#         super().__init__(model)
 #         self.guns = guns
-#         self.model = model
 #         print('Created warship model: {}'.format(self.model))
 #
 #     def attack(self):
@@ -27,9 +23,8 @@
 #
 # class CargoShip(Ship):
 #     def __init__(self, model):
-#         super().__init__(self)
+#         super().__init__(model)
 #         self.fullness = 0
-#         self.model = model
 #         print('Created cargo model: {}'.format(self.model))
 #
 #     def loading(self):
@@ -49,8 +44,8 @@
 # ship2.attack()
 # ship1.loading()
 # ship1.sail()
-
-
+#
+#
 # Task 2. Robots
 #
 # class Robots:
