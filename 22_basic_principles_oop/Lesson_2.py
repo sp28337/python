@@ -5,10 +5,7 @@
 #         self.model = model
 #
 #     def __str__(self):
-#         return "{}".format(self.model)
-#
-#     def info(self):
-#         print('Ship model is {}'.format(self.model))
+#         return "Model: {}".format(self.model)
 #
 #     def sail(self):
 #         print('Ship {} is sailing somewhere.'.format(self.model))
@@ -16,9 +13,8 @@
 #
 # class WarShip(Ship):
 #     def __init__(self, model, guns):
-#         super().__init__(self)
+#         super().__init__(model)
 #         self.guns = guns
-#         self.model = model
 #         print('Created warship model: {}'.format(self.model))
 #
 #     def attack(self):
@@ -27,9 +23,8 @@
 #
 # class CargoShip(Ship):
 #     def __init__(self, model):
-#         super().__init__(self)
+#         super().__init__(model)
 #         self.fullness = 0
-#         self.model = model
 #         print('Created cargo model: {}'.format(self.model))
 #
 #     def loading(self):
@@ -49,13 +44,13 @@
 # ship2.attack()
 # ship1.loading()
 # ship1.sail()
-
-
+#
+#
 # Task 2. Robots
 #
 # class Robots:
 #     def __init__(self, model):
-#         self.__model = model
+#         self.model = model
 #
 #     def operate(self):
 #         print('Robot', end=' ')
@@ -64,40 +59,36 @@
 # class RobotCleaner(Robots):
 #
 #     def __init__(self, model):
-#         super().__init__(self)
-#         self.__model = model
+#         super().__init__(model)
 #         self.__fullness = 0
-#         print('\n(robot model <{}> initialized)'.format(self.__model))
+#         print('\n(robot model <{}> initialized)'.format(self.model))
 #
 #     def __str__(self):
-#         return self.__model + ' cleaner robot'
+#         return self.model + ' cleaner robot'
 #
 #     def operate(self):
 #         super().operate()
 #         self.__fullness += 1
-#         print('{} is cleaning floor. Fullness: {}'.format(self.__model, self.__fullness))
+#         print('{} is cleaning floor. Fullness: {}'.format(self.model, self.__fullness))
 #
 #
 # class WarRobot(Robots):
 #     def __init__(self, model, weapon):
-#         super().__init__(self)
-#         self.__model = model
+#         super().__init__(model)
 #         self.__weapon = weapon
-#         print('\n(robot model <{}> initialized)'.format(self.__model))
+#         print('\n(robot model <{}> initialized)'.format(self.model))
 #
 #     def __str__(self):
-#         return self.__model + ' military robot'
+#         return self.model + ' military robot'
 #
 #     def operate(self):
 #         super().operate()
-#         print('{} defended the military object'.format(self.__model))
+#         print('{} defended the military object by {}'.format(self.model, self.__weapon))
 #
 #
 # class WarShip(Robots):
 #     def __init__(self, model, weapon):
 #         super().__init__(WarRobot)
-#         self.__model = model
-#         self.__weapon = weapon
 #         self.__deep = 0
 #
 #
@@ -112,7 +103,7 @@
 # robot_3 = WarRobot('UnderWaterShip333', 'Torpedoes')
 # print(robot_3)
 # robot_3.operate()
-
+#
 
 # Task 3. Custom exceptions
 #
