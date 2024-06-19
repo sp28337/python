@@ -112,3 +112,21 @@
 # robot_3 = WarRobot('UnderWaterShip333', 'Torpedoes')
 # print(robot_3)
 # robot_3.operate()
+
+
+# Task 3. Custom exceptions
+#
+# class DivisionError(Exception):
+#     pass
+#
+#
+# with open('numbers.txt', 'r', encoding='utf-8') as file:
+#     for row in file:
+#         row = row.split()
+#         try:
+#             if row[0] > row[1]:
+#                 raise DivisionError('You cannot divide more by less')
+#             else:
+#                 print(int(row[0]) / int(row[1]))
+#         except DivisionError as e:
+#             print(e)
