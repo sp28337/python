@@ -261,3 +261,15 @@
 #         write_exception_to_log(e.__str__())
 # else:
 #     print('Your carma got 500 points')
+
+
+# Task 3. My dict
+#
+# class MyDict(dict):
+#     def get(self, __key, __default=0):
+#         return super().get(__key, __default)
+#
+#
+# my_dict = MyDict()
+# my_dict.setdefault(1, 2)
+# print(my_dict.get(2))
