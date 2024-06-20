@@ -448,3 +448,235 @@
 #
 # print()
 # print('Total salary of employees: {}'.format(total_salary))
+
+
+# Task 5. Car
+#
+# import math
+#
+#
+# class Car:
+#     """
+#     Basic class. Define coordinates and direction of vehicle
+#
+#     Args:
+#         x (int): x coordinate
+#         y (int): y coordinate
+#         angle (int): direction of vehicle in degrees
+#     """
+#     def __init__(self, x, y, angle):
+#         self.__x = x
+#         self.__y = y
+#         self.__angle = angle
+#
+#     def __str__(self):
+#         return ('Car\n'
+#                 'coordinates: ({0}, {1})\n'
+#                 'direction: {2} degree(s)\n').format(self.get_x(), self.get_y(), self.get_angle())
+#
+#     def set_x(self, number):
+#         """
+#         Setter for x coordinate
+#
+#         :param number: change <x> coordinate to number
+#         :type number: int
+#         """
+#         self.__x = number
+#
+#     def set_y(self, number):
+#         """
+#         Setter for x coordinate
+#
+#         :param number: change <y> coordinate to number
+#         :type number: int
+#         """
+#         self.__y = number
+#
+#     def set_angle(self, degrees):
+#         """
+#         Setter for angle
+#
+#         :param degrees: change direction of the vehicle
+#         :type degrees: int
+#         """
+#         self.__angle = degrees
+#
+#     def get_x(self):
+#         """
+#         Getter for <x> coordinate
+#
+#         :return: value of <x> coordinate
+#         :rtype: int
+#         """
+#         return self.__x
+#
+#     def get_y(self):
+#         """
+#         Getter for <y> coordinate
+#
+#         :return: value of <y> coordinate
+#         :rtype: int
+#         """
+#         return self.__y
+#
+#     def get_angle(self):
+#         """
+#         Getter for angle
+#
+#         :return: direction of the vehicle
+#         :rtype: int
+#         """
+#         return self.__angle
+#
+#     def change_direction(self, new_angle):
+#         """
+#         Set old direction to new direction
+#
+#         :param new_angle: new direction
+#         :type new_angle: int
+#         """
+#         self.set_angle(new_angle)
+#         print('New direction is {} degrees\n'.format(self.get_angle()))
+#
+#     def drive_to(self, a, b):
+#         """
+#         Vehicle drive to new destination
+#
+#         Attributes:
+#             __distance (float): drove distance
+#
+#         :param a: new point on <x> coordinates
+#         :param b: new point on <y> coordinates
+#         :type a: int         :type b: int
+#         """
+#         __distance = round(math.sqrt(pow((a - self.get_x()), 2) + pow((b - self.get_y()), 2)), 2)
+#         print('Car drove {} km\n'.format(__distance))
+#         self.set_x(a)
+#         self.set_y(b)
+#
+#
+# class Bus(Car):
+#     """
+#     class Bus. Parent: Car
+#
+#     __ticket_price (int): price of ticket for one person
+#
+#     Args:
+#         x (int): point on <x> coordinates
+#         y (int): point on <y> coordinates
+#         angle (int): direction of the vehicle
+#         passengers (int): count of passengers in the bus
+#         money (int): count of money
+#     """
+#
+#     __ticket_price = 1
+#
+#     def __init__(self, x, y, angle, passengers=0, money=0):
+#         super().__init__(x, y, angle)
+#         self.__passengers = passengers
+#         self.__money = money
+#
+#     def __str__(self):
+#         info = super().__str__()
+#         info = ''.join((info, 'type: Bus\n'
+#                               'passengers: {}\n'
+#                               'money: {}$\n'.format(self.get_passengers(), self.get_money()))
+#                        )
+#         return info
+#
+#     def set_passengers(self, count):
+#         """
+#         Setter for passengers
+#
+#         :param count: count of new passengers
+#         :type count: int
+#         """
+#         self.__passengers = count
+#
+#     def set_money(self):
+#         """
+#         Setter for money.
+#
+#         Increases the amount of money depending on the ticket price and the number of passengers
+#         """
+#         self.__money += self.get_passengers() * self.get_ticket_price()
+#         print('[+$] earned {}$'.format(self.get_money()))
+#
+#     def get_passengers(self):
+#         """
+#         Getter for passengers count
+#
+#         :return: count of passengers
+#         :rtype: int
+#         """
+#         return self.__passengers
+#
+#     def get_money(self):
+#         """
+#         Getter for money count
+#
+#         :return: count of money
+#         :rtype: int
+#         """
+#         return self.__money
+#
+#     def get_ticket_price(self):
+#         """
+#         Getter for price of a ticket
+#
+#         :return: price of one ticket
+#         :rtype: int
+#         """
+#         return self.__ticket_price
+#
+#     def drive_to(self, a, b):
+#         """
+#         Vehicle drive to new destination and collects money for travel
+#
+#         Attributes:
+#             __distance (float): drove distance
+#
+#         :param a: new point on <x> coordinates
+#         :param b: new point on <y> coordinates
+#         :type a: int         :type b: int
+#         """
+#         super().drive_to(a, b)
+#         self.set_money()
+#
+#     def passenger_in(self, count=0):
+#         """
+#         A passenger comes inside. Set new passengers count
+#
+#         :param count: count of passengers (default = 0)
+#         :type count: int
+#         """
+#         new_passengers = self.get_passengers() + count
+#         self.set_passengers(new_passengers)
+#         print('[+] {} passenger | total passengers: {}'.format(count, self.get_passengers()))
+#
+#     def passenger_out(self, count=0):
+#         """
+#         A passenger goes outside. Set new passengers count
+#
+#         :param count: count of passengers (default = 0)
+#         :type count: int
+#         """
+#         new_passengers = self.get_passengers() - count
+#         self.set_passengers(new_passengers)
+#         print('[-] {} passenger | total passengers: {}'.format(count, self.get_passengers()))
+#
+#
+# car = Car(5, 8, 45)
+# print(car)
+# car.drive_to(1, 3)
+# print(car)
+# car.change_direction(23)
+# print(car)
+#
+# bus = Bus(1, 1, 33)
+# print(bus)
+# bus.passenger_in(7)
+# bus.drive_to(2, 4)
+# bus.passenger_out(2)
+# bus.drive_to(4, 6)
+# print(bus)
