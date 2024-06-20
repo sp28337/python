@@ -273,3 +273,178 @@
 # my_dict = MyDict()
 # my_dict.setdefault(1, 2)
 # print(my_dict.get(2))
+
+
+# Task 4. Company
+#
+# class Person:
+#     """
+#     Basic class. Define person's parameters like (name, surname, age)
+#
+#     Args:
+#          name (str): name of a person
+#          surname (str): surname of person
+#          age (int): age of person
+#     """
+#
+#     def __init__(self, name, surname, age):
+#         self.__name = name
+#         self.__surname = surname
+#         self.__age = age
+#
+#     def get_name(self):
+#         """
+#         Getter for name
+#
+#         :return: name
+#         :rtype: str
+#         """
+#         return self.__name
+#
+#
+# class Employee(Person):
+#     """
+#     class Employee. Parent: Person
+#     """
+#
+#     def salary_calculate(self):
+#         """method for salary calculating"""
+#         pass
+#
+#
+# class Manager(Employee):
+#     """
+#     class Manager. Parent: Employee
+#
+#     Args:
+#         name (str): name of a person
+#         surname (str): surname of person
+#         age (int): age of person
+#         salary (int): salary of employee
+#     """
+#
+#     def __init__(self, name, surname, age, salary):
+#         super().__init__(name, surname, age)
+#         self.__salary = salary
+#
+#     def salary_calculate(self):
+#         """salary calculating
+#
+#         :return: final salary for work
+#         :rtype: int
+#         """
+#         print('Salary of manager {}: {}'.format(self.get_name(), self.get_salary()))
+#         return self.get_salary()
+#
+#     def get_salary(self):
+#         """
+#         Getter for salary
+#
+#         :return: final salary for work
+#         :rtype: int
+#         """
+#         return self.__salary
+#
+#
+# class Agent(Employee):
+#     """
+#     class Agent. Parent: Employee
+#
+#     __salary: fix salary for agents
+#
+#     Args:
+#         name (str): name of a person
+#         surname (str): surname of person
+#         age (int): age of person
+#         volume_of_sales (int): volume of sales
+#     """
+#
+#     __salary = 5000
+#
+#     def __init__(self, name, surname, age, volume_of_sales):
+#         super().__init__(name, surname, age)
+#         self.__volume_of_sales = volume_of_sales
+#
+#     def get_salary(self):
+#         """
+#         Getter for salary
+#
+#         :return: final salary for work
+#         :rtype: int
+#         """
+#         return self.__salary
+#
+#     def get_volume_of_sales(self):
+#         """
+#         Getter for volume of sales
+#
+#         :return: volume of sales
+#         :rtype: int
+#         """
+#         return self.__volume_of_sales
+#
+#     def salary_calculate(self):
+#         """salary calculating
+#
+#         :return: final salary for work
+#         :rtype: int
+#         """
+#         __res = self.get_salary() + (self.get_volume_of_sales() * 5 // 100)
+#         print('Salary of agent {}: {}'.format(self.get_name(), __res))
+#         return __res
+#
+#
+# class Worker(Employee):
+#     """
+#       class Worker. Parent: Employee
+#
+#       Args:
+#           name (str): name of a person
+#           surname (str): surname of person
+#           age (int): age of person
+#           hours_worked (int): hours worked
+#       """
+#
+#     def __init__(self, name, surname, age, hours_worked):
+#         super().__init__(name, surname, age)
+#         self.__hours_worked = hours_worked
+#
+#     def get_hours_worked(self):
+#         """
+#         Getter for worked hours
+#
+#         :return: total hours in work
+#         :rtype: int
+#         """
+#         return self.__hours_worked
+#
+#     def salary_calculate(self):
+#         """salary calculating
+#
+#         :return: final salary for work
+#         :rtype: int
+#         """
+#         __res = 100 * self.get_hours_worked()
+#         print('Salary of worker {}: {}'.format(self.get_name(), __res))
+#         return __res
+#
+#
+# manager1 = Manager(name='Oleg', surname='Tinkoff', age=55, salary=13000)
+# manager2 = Manager(name='Alex', surname='Bolt', age=25, salary=13000)
+# manager3 = Manager(name='Mihail', surname='Kormakov', age=34, salary=13000)
+#
+# agent1 = Agent(name='Victor', surname='Kabanov', age=49, volume_of_sales=15000)
+# agent2 = Agent(name='Artem', surname='Aliev', age=29, volume_of_sales=9000)
+# agent3 = Agent(name='Gena', surname='Sergeev', age=57, volume_of_sales=17000)
+#
+# worker1 = Worker(name='Gosha', surname='Cucenko', age=18, hours_worked=120)
+# worker2 = Worker(name='Ivan', surname='Pavlov', age=21, hours_worked=180)
+# worker3 = Worker(name='Stepan', surname='Lamodin', age=61, hours_worked=190)
+#
+# employees_list = [manager1, manager2, manager3, agent1, agent2, agent3, worker1, worker2, worker3]
+# total_salary = 0
+# for employee in employees_list:
+#     total_salary += employee.salary_calculate()
+#
+# print()
+# print('Total salary of employees: {}'.format(total_salary))
