@@ -680,3 +680,347 @@
 # bus.passenger_out(2)
 # bus.drive_to(4, 6)
 # print(bus)
+
+
+# Task 6. Cohabitation 2
+
+import time
+from random import randint
+
+
+class House:
+    __count_of_houses = 0
+
+    def __init__(self, money=100, food=50, pet_food=30, dirt=0):
+        self.__money = money
+        self.__food = food
+        self.__pet_food = pet_food
+        self.__dirt = dirt
+        self.set_count_of_houses()
+        print('(House of number {0} initialized)'.format(self.get_count_of_houses()))
+
+    def __str__(self):
+        return 'House №{}'.format(self.get_count_of_houses())
+
+    def info(self):
+        return ('-*- HOUSE INFO -*-\n'
+                'money: {0}\n'
+                'food: {1}\n'
+                'pet_food: {2}\n'
+                'dirt: {3}\n').format(self.get_money(),
+                                      self.get_food(),
+                                      self.get_pet_food(),
+                                      self.get_dirt())
+
+    def get_count_of_houses(self):
+        return self.__count_of_houses
+
+    def get_money(self):
+        return self.__money
+
+    def get_food(self):
+        return self.__food
+
+    def get_pet_food(self):
+        return self.__pet_food
+
+    def get_dirt(self):
+        return self.__dirt
+
+    def set_dirt(self, val):
+        if val > 0:
+            self.__dirt += val
+            print('  [-] --- it got more dirtier for {0}!'.format(val))
+        elif val < 0:
+            self.__dirt -= val
+            print('  [+] -+- it became cleaner!'.format(val))
+        else:
+            self.__dirt = 0
+            print('  [!] -|- everywhere cleand up!')
+        print('dirt: {0}'.format(self.get_dirt()))
+
+    def set_money(self, val):
+        if val > 0:
+            print('  [+] -+- husband earned {0}$!'.format(val))
+            self.__money += val
+        elif val < 0:
+            print('  [-] -{0}$ someone waisting your money!'.format(val))
+            self.__money -= val
+        else:
+            self.__money = 0
+            print('  [!] -!- wallet is empty!')
+        print('  money: {0}'.format(self.get_money()))
+
+    def set_count_of_houses(self):
+        self.__count_of_houses += 1
+
+    def set_food(self, val):
+        if val > 0:
+            print('  [+] -+- someone put {0} food in the fridge'.format(val))
+            self.__food += val
+            print()
+        elif val < 0:
+            print('  [-] --- someone ate {0} food from the fridge'.format(val))
+            self.__food -= val
+            print()
+        else:
+            self.__food = 0
+            print('  [!] -!- fridge is empty!')
+        print('  food in fridge: {0}'.format(self.get_food()))
+
+    def set_pet_food(self, val):
+        if val > 0:
+            print('  [+] -+- someone bought {0} food for pet'.format(val))
+            self.__pet_food += val
+            print()
+        elif val < 0:
+            print('  [-] --- cat ate {0} food'.format(val))
+            self.__pet_food -= val
+            print()
+        else:
+            self.__food = 0
+            print('  [!] -!- Pet food is empty!')
+        print('  pet food: {0}'.format(self.get_pet_food()))
+
+
+class AliveObject:
+    def __init__(self, name, home, fullness=30):
+        self.__name = name
+        self.__home = home
+        self.__fullness = fullness
+
+    def __str__(self):
+        return ('[INFO] Name: {0} | Residence: {1}\n'
+                'Fullness: {2}').format(self.get_name(), self.get_home(), self.get_fullness())
+
+    def __del__(self):
+        pass
+
+    def get_name(self):
+        return self.__name
+
+    def get_home(self):
+        return self.__home
+
+    def get_fullness(self):
+        return self.__fullness
+
+    def set_fullness(self, val):
+        if val > 0:
+            print('  [+] -+- fullness rose + {0}'.format(val))
+            self.__fullness += val
+        elif val < 0:
+            print('  [-] --- fullness down -{0}'.format(val))
+            self.__fullness -= val
+        print('  fullness: {0}'.format(self.get_fullness()))
+
+    def check_fullness(self):
+        if not self.get_fullness() >= 0:
+            return self.__del__()
+        elif 0 < self.get_fullness() < 10:
+            print('[!] -!- DANGER level of fullness!\n{0}'.format(self.__str__()))
+
+
+class People(AliveObject):
+    def __init__(self, name, home, happiness=100):
+        super().__init__(name, home)
+        self.__happiness = happiness
+
+    def __str__(self):
+        info = super().__str__()
+        new_info = '\n'.join((info, 'Happiness: {0}\n'.format(self.get_happiness())))
+        return new_info
+
+    def __del__(self):
+        pass
+
+    def get_happiness(self):
+        return self.__happiness
+
+    def set_happiness(self, val):
+        if val > 0:
+            self.__happiness += val
+            print('  [+] -+- happiness up +{0}'.format(val))
+        elif val < 0:
+            self.__happiness -= val
+            print('  [-] --- happiness down -{0}'.format(val))
+        print('  happiness of {1}: {0}'.format(self.get_happiness(), self.get_name()))
+
+    def pet_cat(self):
+        print('\n[action] {0} is patting {1} ...'.format(self.get_name(), cat.get_name()))
+        #time.sleep(1)
+        self.set_happiness(5)
+        self.set_fullness(-10)
+        self.check_fullness()
+
+    def eat(self):
+        if self.get_home().get_food() >= 30:
+            print('\n[action] {0} is eating...'.format(self.get_name()))
+            #time.sleep(0.5)
+            self.set_fullness(30)
+            self.get_home().set_food(-30)
+        elif 0 < self.get_home().get_food() < 30:
+            print('\n[action] {0} is eating...'.format(self.get_name()))
+            #time.sleep(0.5)
+            self.set_fullness(self.get_home().get_food())
+            self.get_home().set_food(0)
+        else:
+            print('\n[!] -!- {0} is hungry!'.format(self.get_name()))
+            self.set_fullness(-10)
+            self.check_fullness()
+            self.check_happiness()
+
+    def check_happiness(self):
+        if not self.get_happiness() >= 10:
+            return self.__del__()
+        elif 10 < self.get_happiness() < 20:
+            print('\n[!] -!- DANGER level! {1} has deep depression!\n'
+                  '{0}\n'.format(self.__str__(), self.get_name()))
+
+    def play(self):
+        pass
+
+    def go_work(self):
+        pass
+
+
+class Husband(People):
+    def __del__(self):
+        print('\n[*] {} dead!\n'.format(self.get_name()))
+
+    def play(self):
+        print('[action] {} playing computer...'.format(self.get_name()))
+        #time.sleep(0.5)
+        self.set_happiness(20)
+        self.set_fullness(-10)
+        self.check_fullness()
+        self.check_happiness()
+
+    def go_work(self):
+        print('[action] {} is working...'.format(self.get_name()))
+        #time.sleep(0.5)
+        self.set_fullness(-10)
+        self.check_fullness()
+        self.check_happiness()
+
+
+class Wife(People):
+    def __del__(self):
+        print('\n[*] {} dead!\n'.format(self.get_name()))
+
+    def cleaning_up(self):
+        print('[action] {} is cleaning up...'.format(self.get_name()))
+        #time.sleep(0.5)
+        self.get_home().set_dirt(-randint(80, 100))
+        self.set_fullness(-10)
+        self.check_fullness()
+        self.check_happiness()
+
+    def buy_fur_coat(self, count):
+        if count > 0:
+            print('[action] {} went for purchases...'.format(self.get_name()))
+            #time.sleep(0.5)
+            total_price = count * 350
+            if self.get_home().get_money() >= total_price:
+                print('[+] {0} bought {1} fur coat(s)!'.format(self.get_name(), count))
+                self.get_home().set_money(-total_price)
+                self.set_fullness(60)
+            else:
+                print('[!] Not enough money!')
+                self.set_fullness(-10)
+            self.check_fullness()
+            self.check_happiness()
+        else:
+            raise ValueError('{} cannot buy 0 or less fur coat(s)!'.format(self.get_name()))
+
+    def buy_food(self, count):
+        if count > 0:
+            print('[action] {} went for purchases...'.format(self.get_name()))
+            #time.sleep(0.5)
+            if self.get_home().get_money() >= count:
+                print('[+] {0} bought {1} food!'.format(self.get_name(), count))
+                self.get_home().set_money(-count)
+            else:
+                print('[!] Not enough money!')
+        else:
+            raise ValueError('{} cannot buy 0 or less food!'.format(self.get_name()))
+        self.set_fullness(-10)
+        self.check_fullness()
+        self.check_happiness()
+
+
+class Cat(AliveObject):
+    def __del__(self):
+        print('\n[*] {} dead!\n'.format(self.get_name()))
+
+    def go_bed(self):
+        print('[action] {0} is sleeping now...'.format(self.get_name()))
+        #time.sleep(0.5)
+        self.set_fullness(-10)
+        self.check_fullness()
+
+    def tear_up_wallpaper(self):
+        print('[action] {0} is tearing wallpapers!'.format(self.get_name()))
+        #time.sleep(0.5)
+        self.get_home().set_dirt(-5)
+        self.set_fullness(-10)
+        self.check_fullness()
+
+    def eat(self):
+        if self.get_home().get_pet_food() >= 10:
+            print('[action] {0} is eating food...'.format(self.get_name()))
+            #time.sleep(0.5)
+            self.set_fullness(20)
+            self.get_home().set_pet_food(-20)
+        elif 0 < self.get_home().get_pet_food() < 10:
+            print('[action] {0} is eating food...'.format(self.get_name()))
+            self.set_fullness(self.get_home().get_pet_food())
+            self.get_home().set_pet_food(0)
+        else:
+            print('[!] {0} is hungry!'.format(self.get_name()))
+            self.set_fullness(-5)
+            self.check_fullness()
+
+
+home1 = House()
+husband = Husband('Artem', home1)
+wife = Wife('Katya', home1)
+cat = Cat('Cat', home1)
+print(wife)
+
+cat_actions = {0: 'go_bed()',
+               1: 'tear_up_wallpaper()',
+               2: 'eat()'
+               }
+husband_actions = {0: 'play()',
+                   1: 'go_work()',
+                   2: 'eat()',
+                   3: 'pet_cat()'
+                   }
+wife_actions = {0: 'cleaning_up()',
+                1: 'buy_fur_coat({})'.format(randint(1, 2)),
+                2: 'eat()',
+                3: 'buy_food({})'.format(randint(10, 100)),
+                4: 'pet_cat()'
+                }
+
+days = 1
+while days < 365:
+    try:
+        if home1.get_dirt() > 90:
+            wife.set_happiness(-10)
+            husband.set_happiness(-10)
+        print(' *** Day {} ***'.format(days))
+        for action in (husband, wife, cat):
+            if action is husband:
+                exec('{0}.{1}'.format('husband', husband_actions.get(randint(0, 3))))
+            if action is wife:
+                exec('{0}.{1}'.format('wife', wife_actions.get(randint(0, 4))))
+            if action is cat:
+                exec('{0}.{1}'.format('cat', cat_actions.get(randint(0, 2))))
+        home1.set_dirt(5)
+        days += 1
+    except Exception as e:
+        print(e)
+else:
+    print('\n*** SUCCESSFUL EXPERIMENT ***')
