@@ -1079,3 +1079,60 @@
 #
 # simulate_live(365)
 
+
+# Task 7. Stack
+#
+# class Stack:
+#     def __init__(self):
+#         self.stack = []
+#
+#     def push(self, item):
+#         self.stack.append(item)
+#
+#     def pop_function(self):
+#         self.stack.pop() if len(self.stack) != 0 else None
+#
+#     def __str__(self):
+#         return f'{', '.join(self.stack)}'
+#
+#
+# class TaskManager:
+#     def __init__(self):
+#         self.tasks = Stack()
+#
+#     def new_task(self, task, priority):
+#         if [task, priority] not in self.tasks.stack:
+#             self.tasks.push([task, priority])
+#         else:
+#             print('Task {0} already exists!'.format(task))
+#
+#     def remove_task(self):
+#         self.tasks.pop_function()
+#         if len(self.tasks.stack) == 0:
+#             print('List is empty')
+#
+#     def __str__(self):
+#         new = {}
+#         for some in self.tasks.stack:
+#             if some[1] not in new:
+#                 new[some[1]] = some[0]
+#             else:
+#                 for key, value in new.items():
+#                     if some[1] == key:
+#                         value += '; ' + some[0]
+#                         new[key] = value
+#         return f'{'\n'.join(f'{key}: {value}' for key, value in sorted(new.items()))}'
+#
+#
+# manager = TaskManager()
+# manager.new_task('do clean up', 4)
+# manager.new_task('dish wash', 4)
+# manager.new_task('get rest', 1)
+# manager.new_task('eat', 2)
+# manager.new_task('do task', 2)
+#
+# print(manager)
+# manager.new_task('eat', 2)
+# print(f'\n{manager}')
+# manager.remove_task()
+# print(f'\n{manager}')
