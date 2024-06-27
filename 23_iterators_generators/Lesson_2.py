@@ -48,3 +48,45 @@
 #
 # for element in iterator:
 #     print(element)
+
+
+# Task 3. Primes
+#
+# import math
+#
+#
+# class Primes:
+#     def __init__(self, limit):
+#         self.limit = limit
+#         self.num = 1
+#
+#     def __iter__(self):
+#         self.num = 1
+#         return self
+#
+#     def __next__(self):
+#         self.num += 1
+#         while self.num <= self.limit:
+#             if self.is_prime(self.num):
+#                 return self.num
+#             self.num += 1
+#         else:
+#             raise StopIteration
+#
+#     @staticmethod
+#     def is_prime(val):
+#         for i in range(2, int(math.sqrt(val)) + 1):
+#             if val % i == 0:
+#                 return False
+#         else:
+#             return True
+#
+#
+# prime_nums = Primes(limit=50)
+# for i in prime_nums:
+#     print(i, end=' ')
+#
+# print()
+#
+# for j in prime_nums:
+#     print(j, end=' ')
