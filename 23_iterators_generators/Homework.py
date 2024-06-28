@@ -42,3 +42,25 @@
 # test3 = (x ** 2 for x in range(1, user_number + 1))
 # for k in test3:
 #     print(k, end=' ')
+
+
+# Task 2. Refactoring
+from collections.abc import Iterable
+#
+#
+# def find_gen(num_to_find: int, l1: list, l2: list) -> str:
+#     for x in l1:
+#         for y in l2:
+#             yield '{0} * {1} = {2}'.format(x, y, x * y)
+#             if x * y == num_to_find:
+#                 print('Found!')
+#                 return
+#
+#
+# list_1 = [2, 5, 7, 10]
+# list_2 = [3, 8, 4, 9]
+# to_find = 56
+#
+# test = find_gen(to_find, list_1, list_2)
+# for i in test:
+#     print(i)
