@@ -126,3 +126,32 @@
 #     else:
 #         break
 
+# Task 5. Count of strings
+#
+# import os
+# from collections.abc import Iterable
+#
+#
+# def total_strings(target_dir: str) -> Iterable:
+#     for elem in os.listdir(target_dir):
+#         if elem.endswith('.py'):
+#             yield os.path.join(target_dir, elem)
+#
+#
+# def count_in_file(path: Iterable) -> Iterable:
+#     counter = 0
+#     for i in path:
+#         print(i)
+#         with open(i, 'r', encoding='utf-8') as file:
+#             for line in file:
+#                 if not line.startswith('#') and not line == '\n':
+#                     counter += 1
+#     yield counter
+#
+#
+# directory = os.path.abspath(os.path.join('..', input('Enter name of directory: ')))
+# if os.path.exists(directory):
+#     test2 = sum(count_in_file(total_strings(directory)))
+#     print('\nCount of strings in directory: {}'.format(test2))
+# else:
+#     print('Error! Path not found')
