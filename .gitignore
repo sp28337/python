@@ -2,3 +2,4 @@
 .idea/
 *.log
 *.txt
+/23_iterators_generators/.vscode/settings.json
