@@ -25,3 +25,29 @@
 #
 # test1 = sandwich('meet')
 # print(test1)
+
+
+# Task 2. Plugins
+# from typing import Callable, Any
+#
+# PLUGINS = dict()
+#
+#
+# def register(func: Callable) -> Callable:
+#     PLUGINS[func.__name__] = func
+#     return func
+#
+#
+# @register
+# def say_hallo(name: str) -> str:
+#     return 'Hello {}!'.format(name)
+#
+#
+# @register
+# def say_goodbye(name: str) -> str:
+#     return 'Goodbye {}!'.format(name)
+#
+#
+# test = say_hallo('Thai')
+# print(test)
+# print(PLUGINS)
