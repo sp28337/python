@@ -155,3 +155,98 @@
 #     print('\nCount of strings in directory: {}'.format(test2))
 # else:
 #     print('Error! Path not found')
+
+
+# Task 6. Singly linked list
+#
+# from typing import Any, Optional
+#
+#
+# class Node:
+#     def __init__(self, value: Optional[Any] = None, next: Optional['Node'] = None) -> None:
+#         self.value = value
+#         self.next = next
+#
+#     def __str__(self) -> str:
+#         return '{value}'.format(value=str(self.value))
+#
+#
+# class LinkedList:
+#
+#     def __init__(self) -> None:
+#         self.head: Optional[Node] = None
+#         self.len = 0
+#
+#     def __str__(self) -> str:
+#         if self.head is not None:
+#             current = self.head
+#             values = [str(current.value)]
+#             while current.next is not None:
+#                 current = current.next
+#                 values.append(str(current.value))
+#             return '[{values}]'.format(values=' '.join(values))
+#         return 'LinkedList []'
+#
+#     def append(self, elem: Any) -> None:
+#         new_node = Node(elem)
+#         if self.head is None:
+#             self.head = new_node
+#             return
+#         last = self.head
+#         while last.next:
+#             last = last.next
+#         last.next = new_node
+#         self.len += 1
+#
+#     def remove(self, index) -> None:
+#         cur_nod = self.head
+#         cur_index = 0
+#         if self.len == 0 or self.len < index:
+#             raise IndexError
+#
+#         if cur_nod is not None:
+#             if index == 0:
+#                 self.head = cur_nod.next
+#                 self.len -= 1
+#                 return
+#
+#         while cur_nod is not None:
+#             if cur_index == index:
+#                 break
+#             prev = cur_nod
+#             cur_nod = cur_nod.next
+#             cur_index += 1
+#
+#         prev.next = cur_nod.next
+#         self.len -= 1
+#
+#     def get(self, index: int, rtrn: Optional[Any] = None) -> None:
+#         cur_nod = self.head
+#         cur_index = 0
+#         if self.len == 0 or self.len < index:
+#             print(rtrn)
+#             return
+#
+#         if cur_nod is not None:
+#             if index == 0:
+#                 print(self.head)
+#                 return
+#
+#         while cur_nod is not None:
+#             if cur_index == index:
+#                 break
+#             prev = cur_nod
+#             cur_nod = cur_nod.next
+#             cur_index += 1
+#         print(cur_nod)
+#
+#
+# my_lists = LinkedList()
+# my_lists.append(10)
+# my_lists.append(20)
+# my_lists.append(30)
+# print(my_lists)
+# my_lists.remove(2)
+# print(my_lists)
+# my_lists.get(0)
+
