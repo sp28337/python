@@ -12,3 +12,24 @@
 #
 #
 # test()
+
+
+# Task 2. Slowing code
+# import time
+# import functools
+# from typing import Callable, Any
+#
+#
+# def wait_5_sec(func: Callable) -> Callable:
+#     time.sleep(2)
+#     result = func
+#     return result
+#
+#
+# @wait_5_sec
+# def check_web_page() -> str:
+#     return 'Web page checking...'
+#
+#
+# print(check_web_page())
+# print(check_web_page())
