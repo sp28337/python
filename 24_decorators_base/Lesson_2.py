@@ -18,3 +18,34 @@
 #
 #
 # greeting('Pattaya')
+
+
+# Task 2. Timer 2
+# import time
+# from typing import Callable, Any
+#
+#
+# def timer(func: Callable) -> Callable:
+#     """Decorator for check running time of a function"""
+#
+#     def wrapped_func(*args: Any, **kwargs: Any) -> Any:
+#         start = time.time()
+#         result = func(*args, **kwargs)
+#         finish = time.time()
+#         total_t = round(finish - start, 4)
+#         print('Function was running for {} seconds'.format(total_t))
+#         return result
+#
+#     return wrapped_func
+#
+#
+# @timer
+# def rand_function(num: int) -> int:
+#     total = 0
+#     for i in range(num):
+#         total += sum([j**3 for j in range(1, 100)])
+#     return total
+#
+#
+# result = rand_function(10000)
+# print(result)
