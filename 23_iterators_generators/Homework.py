@@ -45,7 +45,7 @@
 
 
 # Task 2. Refactoring
-from collections.abc import Iterable
+# from collections.abc import Iterable
 #
 #
 # def find_gen(num_to_find: int, l1: list, l2: list) -> str:
@@ -64,3 +64,39 @@ from collections.abc import Iterable
 # test = find_gen(to_find, list_1, list_2)
 # for i in test:
 #     print(i)
+
+
+# Task 3. File's paths
+# import os
+# from typing import Optional, Any
+#
+# def gen_files_path(target_dir: str = '23_iterators_generators',
+#                    start_dir: str = os.path.abspath(os.path.join('/'))) -> Optional[list]:
+#     try:
+#         print('Start dir:', start_dir)
+#         for element in os.listdir(start_dir):
+#             if not element.startswith('.'):
+#                 current_path = os.path.join(start_dir, element)
+#                 print('    now at --- {}'.format(current_path))
+#                 if os.path.isdir(current_path):
+#                     if element == target_dir:
+#                         list_files_path = [os.path.join(current_path, file)
+#                                            if os.path.isfile(os.path.join(current_path, file))
+#                                            else print('\nSEEKING WAS FINISHED\n')
+#                                            for file in os.listdir(current_path)
+#                                            ]
+#
+#                         return list_files_path
+#
+#                     result = gen_files_path(target_dir, current_path)
+#                     if result:
+#                         break
+#         else:
+#             result = None
+#         return result
+#     except PermissionError as e:
+#         print(e)
+#
+#
+# test1 = gen_files_path()
+# print(test1)
