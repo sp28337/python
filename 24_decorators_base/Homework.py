@@ -110,3 +110,50 @@
 # # print(greeting('Richard', age=100))
 # print(greeting('Tom'))
 # print(greeting(name='Dorrisile', age=16))
+
+
+# Task 5. Counter
+#
+# import functools
+# from typing import Callable
+#
+#
+# class Counter:
+#     def __init__(self, func):
+#         self.func = func
+#         self.count = 0
+#
+#     def __call__(self, *args, **kwargs):
+#         self.count += 1
+#         self.call_info()
+#         return self.func(*args, **kwargs)
+#
+#     def call_info(self):
+#         print('Function {0} was called {1} times'.format(self.func.__name__, self.count))
+#
+#
+# # def counter(func: Callable) -> Callable:
+# #     def wrapp_func(*args, **kwargs):
+# #         wrapp_func.calls += 1
+# #         result = func(*args, **kwargs)
+# #
+# #     wrapp_func.calls = 0
+# #     return wrapp_func
+#
+#
+# @Counter
+# def test_func(val):
+#     return val ** 2
+#
+#
+# @Counter
+# def test_func2(val):
+#     return val ** 3
+#
+#
+# # print(test_func.calls)
+# test = test_func(4)
+# test3 = test_func(434)
+# # print(test_func.calls)
+# test2 = test_func2(5)
+# # print(test_func2.calls)
