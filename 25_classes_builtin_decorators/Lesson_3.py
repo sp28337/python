@@ -45,3 +45,31 @@
 #     test_file.seek(0)
 #     for i in test_file:
 #         print(i)
+
+
+# Task 2. Example
+#
+# class Example:
+#     """ Context manager """
+#     def __init__(self) -> None:
+#         print('__init__ call')
+#
+#     def __enter__(self) -> None:
+#         print('__enter__ call')
+#
+#     def __exit__(self, exc_type, exc_val, exc_tb) -> bool:
+#         print('__exit__ call')
+#         if exc_type:
+#             print('Type error: {0}\n'
+#                   'Value error: {1}\n'
+#                   'Due to: {2}'.format(exc_type, exc_val, exc_tb)
+#                   )
+#         return True
+#
+#
+# my_obj = Example()
+# with my_obj as obj:
+#     print('Код внутри первого вызова контекст менеджера')
+#     with my_obj as obj2:
+#         raise Exception('Выброс исключения во вложенном (втором) вызове контекст менеджере')
+#     print('Я обязательно выведусь...')
