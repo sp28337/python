@@ -316,3 +316,50 @@
 # print(pyramid.__dict__)
 # print(pyramid.surface)
 # print(cube.surf_area())
+
+
+# # Task 4. Date
+#
+# class Date:
+#     """ Class Date represents a date """
+#     @classmethod
+#     def verify_date(cls, string: str) -> bool:
+#         if type(string) is not str:
+#             raise TypeError('Wrong type! Argument must be a str')
+#
+#         sep = [x for x in string if not x.isdigit()]
+#
+#         if len(sep) != 2:
+#             raise TypeError('Wrong sep! Format: <"dd-mm-yyyy">')
+#
+#         string = string.split(sep.pop())
+#
+#         if not all([sym.isdigit() for sym in ''.join(string)]):
+#             raise TypeError('All symbols must be digits! Format: <"dd-mm-yyyy">')
+#
+#         return 0 <= int(string[0]) <= 31 and 1 <= int(string[1]) <= 12 and 0 <= int(string[2]) <= 9999
+#
+#     @classmethod
+#     def from_string(cls, date: str) -> 'Date':
+#         if cls.verify_date(date):
+#             day, month, year = map(int, date.split('-'))
+#             date_obj = cls(day, month, year)
+#             return date_obj
+#         raise TypeError('Incorrect type! Format: <"dd-mm-yyyy">')
+#
+#     def __init__(self, day: int = 0, month: int = 0, year: int = 0) -> None:
+#         self.day, self.month, self.year = day, month, year
+#
+#     def __str__(self):
+#         return 'Day: {0} Month: {1} Year: {2}'.format(self.day, self.month, self.year)
+#
+#
+# try:
+#     ddate = Date.from_string('2-12-99')
+#     print(ddate.__dict__)
+#     print(ddate)
+# except Exception as e:
+#     print(e)
+# finally:
+#     print(Date.verify_date('1-12-2077'))
+#     print(Date.verify_date('40-12-2077'))
