@@ -26,3 +26,24 @@
 #
 # with timer() as t:
 #     print(get_nod("94", 846))
+
+
+# Task 2. Directories
+# import os
+# from contextlib import contextmanager
+# import pprint
+#
+#
+# @contextmanager
+# def in_dir(path: str) -> str:
+#     if not os.path.exists(path):
+#         raise NameError('There are not such path like this')
+#     yield path
+#
+#
+# try:
+#     with in_dir(os.path.abspath(os.path.join(os.sep, 'home', 'sp28337', "projects", 'pythdon'))) as p:
+#         pprint.pprint(os.listdir(p))
+# except Exception as e:
+#     print(e)
+
