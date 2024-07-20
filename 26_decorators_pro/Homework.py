@@ -212,3 +212,33 @@ from functools import wraps
 # my_obj = B()
 # my_obj.test_sum_1()
 # my_obj.test_sum_2()
+
+
+# Task 4. All world is - decorator
+# from collections.abc import Callable
+# from functools import wraps
+#
+#
+# def decorator_with_args_for_any_decorator(decorator):
+#     def wrapper(*args, **kwargs):
+#         def wrapped_decorator(func: Callable) -> Callable:
+#             return decorator(func, *args, **kwargs)
+#         return wrapped_decorator
+#     return wrapper
+#
+#
+# @decorator_with_args_for_any_decorator
+# def decorated_decorator(func: Callable, *args, **kwargs):
+#     def inner(*inner_args, **inner_kwargs):
+#         print(f"Переданные арг и кварги в декоратор: {args} {kwargs}")
+#         return func(*inner_args, **inner_kwargs)
+#
+#     return inner
+#
+#
+# @decorated_decorator(100, 'рублей', 200, 'друзей')
+# def decorated_function(text: str, num: int) -> None:
+#     print("Привет", text, num)
+#
+#
+# decorated_function("Юзер", 101)
