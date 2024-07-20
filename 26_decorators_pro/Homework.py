@@ -73,3 +73,44 @@ from functools import wraps
 #
 # delete_site()
 # add_comment()
+
+
+# Task 2. Callback function
+# import os
+# import pprint
+#
+#
+# def callback(_func=None, path='/'):
+#     def decorator(func):
+#         def wrapper(*args, **kwargs):
+#             pprint.pprint(f"list dirs: {os.listdir(path)}")
+#             res = func(*args, **kwargs)
+#             return res
+#
+#         return wrapper
+#
+#     if _func is None:
+#         return decorator
+#     return decorator(_func)
+#
+#
+# class App:
+#
+#     def get(self, path):
+#         if os.path.exists(path):
+#             return self.example
+#         return None
+#
+#     @callback
+#     def example(self):
+#         print('Пример функции, которая возвращает ответ сервера')
+#         return 'OK'
+#
+#
+# app = App()
+# route = app.get('/')
+# if route:
+#     response = route()
+#     print('Ответ:', response)
+# else:
+#     print('Такого пути нет')
