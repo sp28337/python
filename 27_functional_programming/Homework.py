@@ -15,3 +15,25 @@
 # print(floats2)
 # print(names2)
 # print(numbers2)
+
+
+# Task 2. <timeit> module
+#
+# import timeit
+#
+#
+# gen_time = timeit.timeit('"-".join(str(n) for n in range(100))', number=10000)
+# lst_cmpr_time = timeit.timeit('"-".join([str(n) for n in range(100)])', number=10000)
+# map_time = timeit.timeit('"-".join(map(str, range(100)))', number=10000)
+#
+# print(gen_time)
+# print(lst_cmpr_time)
+# print(map_time)
+#
+# # str1 = "-".join(str(n) for n in range(100))
+# # str2 = "-".join([str(n) for n in range(100)])
+# # str3 = "-".join(map(str, range(100)))
+# #
+# # print(str3)
+# # print(str1)
+# # print(str2)
