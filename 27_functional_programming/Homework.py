@@ -46,3 +46,36 @@
 # numbers: List[int] = [1, 2, 3, 4, 5, 6, 7, 8]
 # result = list(map(lambda x, y: (x, y), strings, numbers))
 # print(result)
+
+
+# Task 4. Code readability
+# import timeit
+#
+# t1 = timeit.timeit("""def is_prime(num):
+#     if num <= 1:
+#         return False
+#     for div in range(2, int(num ** 0.5) + 1):
+#         if num % div == 0:
+#             return False
+#     return True
+#
+#
+# print(*[x for x in range(1001) if is_prime(x)])""", number=10)
+# print(t1)
+#
+# t2 = timeit.timeit("""print(*[n for n in range(2, 1001) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))])""", number=10)
+# print(t2)
+#
+# # def is_prime(num):
+# #     if num <= 1:
+# #         return False
+# #     for div in range(2, int(num ** 0.5) + 1):
+# #         if num % div == 0:
+# #             return False
+# #     return True
+# #
+# #
+# # print(*[x for x in range(1001) if is_prime(x)])
+#
+# # print(*[n for n in range(2, 1001) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))])
+
