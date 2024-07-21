@@ -24,3 +24,79 @@
 # print(min(grades, key=lambda x: x['score']))
 # print(max(grades, key=lambda x: x['score']))
 
+
+# Task 2. Sorting
+# from pprint import pprint
+#
+#
+# class Person:
+#     """
+#     Class Person. Represents any person
+#
+#     Args:
+#         name (str): person name
+#         age (str): person age
+#         country (str): living country
+#
+#      """
+#
+#     def __init__(self, name: str, age: str, country: str) -> None:
+#         self.name = name
+#         self.age = age
+#         self.country = country
+#
+#     @property
+#     def name(self) -> str:
+#         """ Getter for name """
+#         return self.__name
+#
+#     @name.setter
+#     def name(self, new_name: str) -> None:
+#         """ Setter for name """
+#         self.__name = new_name
+#
+#     @property
+#     def age(self) -> str:
+#         """ Getter for age """
+#         return self.__age
+#
+#     @age.setter
+#     def age(self, new_age: str) -> None:
+#         """ Setter for age """
+#         self.__age = new_age
+#
+#     @property
+#     def country(self) -> str:
+#         """ Getter for country """
+#         return self.__country
+#
+#     @country.setter
+#     def country(self, new_country: str) -> None:
+#         """ Setter for country """
+#         self.__country = new_country
+#
+#
+# def age_sort(string: str) -> int:
+#     """ Getting age from full string of person """
+#     age = ''
+#     for sym in string:
+#         if sym.isdigit():
+#             age += sym
+#     return int(age)
+#
+#
+# user1 = Person('Ivan', '30', 'Russia')
+# user2 = Person('Pavel', '29', 'Thailand')
+# user3 = Person('Goga', '27', 'USA')
+# user4 = Person('Nik', '55', 'Canada')
+# user5 = Person('Artem', '18', 'Vologda')
+#
+# people_list = [' | '.join(usr.__dict__.values()) for usr in [user1, user2, user3, user4, user5]]
+# #people_list = [''.join(usr.age) for usr in [user1, user2, user3, user4, user5]]
+#
+# print(type(people_list))
+# pprint(people_list)
+# print()
+# pprint(sorted(people_list, key=lambda x: age_sort(x)))
+# print()
+# pprint(sorted(people_list, key=lambda x: age_sort(x), reverse=True))
