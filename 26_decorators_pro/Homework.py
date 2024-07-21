@@ -242,3 +242,46 @@ from functools import wraps
 #
 #
 # decorated_function("Юзер", 101)
+
+
+# Task 5. Singleton
+from functools import wraps
+#
+#
+# def singleton(cls):
+#     instanses = dict()
+#
+#     @wraps(cls)
+#     def get_instance(*args, **kwargs):
+#         if cls not in instanses:
+#             instanses[cls] = cls(*args, **kwargs)
+#
+#         return instanses[cls]
+#     return get_instance
+#
+#
+# @singleton
+# class Example:
+#     # __instance = None
+#     #
+#     # def __new__(cls, *args, **kwargs):
+#     #     if cls.__instance is None:
+#     #         cls.__instance = super().__new__(cls)
+#     #     return cls.__instance
+#     pass
+#
+#
+# my_obj = Example()
+# my_another_obj = Example()
+#
+#
+# print(id(my_obj))
+# print(id(my_another_obj))
+#
+#
+# print(my_obj is my_another_obj)
+
+# Результат:
+# 1986890616688
+# 1986890616688
+# True
