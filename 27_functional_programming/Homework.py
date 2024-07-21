@@ -79,3 +79,23 @@
 #
 # # print(*[n for n in range(2, 1001) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))])
 
+
+# Task 5. Palindrome come back
+# from collections import Counter
+#
+#
+# def can_be_palindrome(s):
+#     return len(list(filter(lambda x: x % 2, Counter(s).values()))) <= 2
+#
+#     # s = ''.join(s.split()).lower()
+#     # char_count = Counter(s)
+#     # odd_count = 0
+#     # for count in char_count.values():
+#     #     if count % 2 != 0:
+#     #         odd_count += 1
+#     # return odd_count <= 1
+#
+#
+# print(can_be_palindrome("A man a plan a canal Panama"))
+# print(can_be_palindrome('ababc'))
+# print(can_be_palindrome('abbbc'))
