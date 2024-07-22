@@ -27,3 +27,14 @@
 #
 # print(text)
 # print(re.sub(r'wo', r'CHANGE', text))
+
+
+# Task 2. Escaping special characters
+# import re
+#
+#
+# text = (r'How much \wwood+?, would a \wwood+?chuck \dwwood+, '
+#         r'chuck if a \wwood+?,chuck could chuck \wwood?,')
+#
+# lst = re.findall(r"\\wwood\+\?,", text)
+# print(lst)
