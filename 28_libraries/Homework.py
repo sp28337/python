@@ -85,3 +85,14 @@
 # first()
 # second()
 
+
+# Task 6. Web scraping
+# import requests
+# from bs4 import BeautifulSoup
+# from pprint import pprint
+#
+# page = requests.get("http://www.google.com")
+# soup = BeautifulSoup(page.text, 'html.parser')
+# print(soup.prettify())
+# for i in soup.find_all('a'):
+#     print(i.text)
