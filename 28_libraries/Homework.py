@@ -26,3 +26,21 @@
 #
 # print(*private_vehicles)
 # print(*taxi)
+
+
+# Task 3. Breaking bad
+# pass
+
+
+# Task 4. Phone numbers
+# import re
+#
+#
+# numbers = ['9999999999', '999999-999', '99999x9999']
+# pattern = r"\b[8-9]\d{9}\b"
+#
+# for number in numbers:
+#     if re.findall(pattern, number):
+#         print('OK')
+#     else:
+#         print('NOT')
