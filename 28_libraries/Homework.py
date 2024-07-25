@@ -44,3 +44,44 @@
 #         print('OK')
 #     else:
 #         print('NOT')
+
+
+# Task 5. Pin-Code
+#import timeit
+# import itertools
+# from pprint import pprint
+# import time
+# from functools import wraps
+#
+#
+# def set_timer(_func=None, times=1):
+#     def timer(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             st = time.time()
+#             for _ in range(times):
+#                 res = func(*args, **kwargs)
+#             print(f"Runtime of func {func.__name__}: {time.time() - st}")
+#             return res
+#         return wrapper
+#     if _func is None:
+#         return timer
+#     return timer(_func)
+#
+#
+# @set_timer
+# def first():
+#     for i in range(10000):
+#         print(('%04d' % i).)
+#
+#
+# @set_timer
+# def second():
+#     pin_code = itertools.product(range(10), repeat=4)
+#     for number in pin_code:
+#         print(number)
+#
+#
+# first()
+# second()
+
